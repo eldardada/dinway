@@ -7,8 +7,17 @@ window.addEventListener('load', function() {
     const body = document.querySelector('body');
     
     const feedbackSlider = new Swiper('.feedback-slider .swiper-container', {
-        slidesPerView: 3,
-        spaceBetween: 40
+        slidesPerView: 1,
+        spaceBetween: 40,
+        breakpoints: {
+            968: {
+                slidesPerView: 3
+            },
+            576: {
+                slidesPerView: 2
+            }
+            
+        }
     })
 
 

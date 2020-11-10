@@ -1,13 +1,22 @@
 .bizes
     padding-top: 0
-    margin-top: 100px
+    margin-top: 195px
     position: relative
     background-color: #EBF1FE
+    +bp1250-block
+        margin-top: 60px
+    +lg-block
+        padding-top: 60px
     &__wave1
         position: absolute
         fill: #EBF1FE
         z-index: -1
-        top: -100px
+        left: 0
+        right: 0
+        bottom: calc(100% - 45px)
+        +bp1250-block
+            bottom: calc(100% - 2px)
+
     &__wave2
         position: absolute
         fill: #EBF1FE
@@ -24,6 +33,8 @@
         grid-template-columns: repeat(6, 1fr)
         grid-template-rows: 546px 490px 250px
         grid-gap: 40px
+        +lg-block
+            grid-template-rows: initial
                 
 .biz
     text-align: center
@@ -32,7 +43,14 @@
     display: flex
     flex-direction: column
     align-items: center
-    padding: 40px
+    padding: 40px 10px
+    +lg-block
+        grid-row: initial
+        grid-column: span 3
+        +md-block
+            grid-column: span 6
+    &-img
+        margin-bottom: 30px
     &__title
         font-size: 24px
         font-weight: 600
@@ -42,32 +60,32 @@
         font-size: 16px
         line-height: 22px
         margin-bottom: 21px
-        
+    &-1 
+        .biz-img
+            margin-top: 50px
+            +md-block
+                margin-top: 0
+        .biz__subtitle
+            max-width: 210px
+    &-2 .biz__subtitle
+        max-width: 197px
+    &-3 .biz__subtitle
+        max-width: 149px
+    &-4 .biz__subtitle, &-5 .biz__subtitle
+        max-width: 170px
+    &-6 .biz__btn
+        margin-bottom: auto
 
-.biz-1, .biz-2, .biz-3
-    grid-row: 1/2
-
-.biz-1
-    grid-column: 1/3
-
-.biz-2
-    grid-column: 3/5
-
-.biz-3
-    grid-column: 5/7
-
-.biz-4, .biz-5
-    grid-row: 2/3
-
-.biz-4
-    grid-column: 1/4
-
-.biz-5
-    grid-column: 4/7
-
-.biz-6
-    grid-row: 3/4
-    grid-column: 1/7
+    &-1, &-2, &-3
+        grid-row: 1/2
+        grid-column: span 2
+    &-4, &-5
+        grid-row: 2/3
+        grid-column: span 3
+    &-6
+        grid-row: 3/4
+        grid-column: span 6
+    
 
 
     
