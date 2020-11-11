@@ -18,7 +18,7 @@ const smartgridSettings = {
             width: "1250px",
         },
         lg: {
-            width: "1050px",
+            width: "1000px",
         },
         bp900: {
             width: "900px",
@@ -27,13 +27,13 @@ const smartgridSettings = {
             width: "768px",
         },
         sm: {
-            width: "576px"
+            width: "576px",
         },
         xs: {
-            width: "420px"
+            width: "450px",
         },
         xxs: {
-            width: "340px"
+            width: "375px",
         }
     }
 };

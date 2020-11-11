@@ -1,72 +1,82 @@
+@import burger
+
 .header
     display: flex
-    justify-content: space-between
     align-items: center
-    &__left, &__right
-        display: flex
-        align-items: center
+    padding-bottom: 10px
     &__logo
         margin-right: 70px
         +md-block
             margin-right: 20px
-        +sm-block
-            display: none
-    &-link
-        position: relative
-        font-size: 14px
-        color: inherit
-        text-decoration: none
-        text-transform: uppercase
-        transition: color .3s
-        &::after
-            content: ''
-            position: absolute
-            bottom: -6px
-            left: 0
-            display: block
-            height: 1px
-            background-color: var(--color-orange)
-            width: 100%
-            transform: scaleX(0)
-            transition: transform .3s
-            transform-origin: center center
-        &:hover::after
-            transform: scaleX(1)
-
+    &__burger
+        +md-block
+            margin-left: auto
 .nav
-    +sm-block
+    flex-grow: 1
+    +md-block
         z-index: 1
-        position: absolute
+        position: fixed
         top: 0
-        left: 0
+        right: 0
         bottom: 0
-        background-color: rgba(0,0,0,0.7)
-        transform: translateX(-800px)
+        overflow: auto
+        background-color: rgba(0,0,0,0.8)
+        transform: translateX(800px)
         transition: transform .3s
-    &__list
+    &-list
         display: flex
-        justify-content: space-between
-        width: 320px
+        width: 100%
         text-transform: uppercase
-        +sm-block
-            text-transform: capitalize
-            color: #fff
+        +md-block
+            @media screen and ( max-height: 300px)
+                padding: 50px 0
+            color: var(--color-white)
+            width: 320px
             font-size: 30px
             justify-content: center
             align-items: center
             flex-direction: column
             height: 100%
-            li
-                &:not(:last-child)
-                    margin-bottom: 10px
+        > li
+            &:not(:last-child)
+                margin-right: 30px
+                +md-block
+                    margin-right: 0
+                    &:not(:last-child)
+                        margin-bottom: 10px
+        &__reg
+            margin-left: auto
+            +md-block
+                margin-left: 0
+        
+.header.active
+    +md-block
+        .nav
+            transform: translateX(0)
+    ~ .overlay
+        display: block
 
-.header
-    &.active
-        +sm-block
-            .nav
-                transform: translateX(0)
-        ~ .overlay
-            display: block
+.header-link
+    position: relative
+    font-size: 14px
+    color: inherit
+    text-decoration: none
+    text-transform: uppercase
+    transition: color .3s
+    &::after
+        content: ''
+        position: absolute
+        bottom: -6px
+        left: 0
+        display: block
+        height: 1px
+        background-color: var(--color-orange)
+        width: 100%
+        transform: scaleX(0)
+        transition: transform .3s
+        transform-origin: center center
+    &:hover::after
+        transform: scaleX(1)
 
 .cabinet
     &__link
@@ -81,7 +91,7 @@
     position: relative
     z-index: 2
     display: none
-    +sm-block
+    +md-block
         display: block
 
 .ham 
@@ -109,7 +119,7 @@
 .line 
     fill: none
     transition: stroke-dasharray 400ms, stroke-dashoffset 400ms, stroke 400ms
-    stroke: #1448B6
+    stroke: var(--color-black)
     stroke-width: 5.5
     stroke-linecap: round
   
