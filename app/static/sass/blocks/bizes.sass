@@ -27,9 +27,18 @@
     &__title
         text-align: center
         margin-bottom: 80px
-    &__blocks
-        +lg-block
-            grid-template-rows: initial
+    &__slider
+        margin-bottom: 40px
+
+
+.bizes-blocks
+    display: grid
+    grid-gap: 40px
+    grid-template-columns: 1fr 1fr
+    &__biz-6
+        grid-column: span 2
+    
+    
                 
 .biz
     text-align: center
@@ -38,28 +47,30 @@
     display: flex
     flex-direction: column
     align-items: center
+    justify-content: center
     padding: 40px 10px
-    +lg-block
-        grid-row: initial
-        grid-column: span 3
-        +md-block
-            grid-column: span 6
     &-img
-        margin-bottom: 30px
+        height: 300px
+        display: flex
+        align-items: center
+        img
+            max-height: 100%
+        +xl-block
+            height: 150px
     &__title
         font-size: 24px
         font-weight: 600
-        margin-top: auto
+        margin-top: 30px
         margin-bottom: 13px
+        +xl-block
+            font-size: 16px
+        +xs-block
+            font-size: 18px
     &__subtitle
         font-size: 16px
         line-height: 22px
         margin-bottom: 21px
     &-1 
-        .biz-img
-            margin-top: 50px
-            +md-block
-                margin-top: 0
         .biz__subtitle
             max-width: 210px
     &-2 .biz__subtitle
@@ -70,17 +81,6 @@
         max-width: 170px
     &-6 .biz__btn
         margin-bottom: auto
-
-    &-1, &-2, &-3
-        grid-row: 1/2
-        grid-column: span 2
-    &-4, &-5
-        grid-row: 2/3
-        grid-column: span 3
-    &-6
-        grid-row: 3/4
-        grid-column: span 6
-    
 
 
     

@@ -26,6 +26,9 @@ const smartgridSettings = {
         md: {
             width: "768px",
         },
+        bp730: {
+            width: "730px",
+        },
         sm: {
             width: "576px",
         },
