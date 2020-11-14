@@ -295,7 +295,7 @@ export const getFiles = (dir, files_) => {
         }
     }
     files_ = files_.filter(file => {
-      return /\.scss$/.test(file);
+      return /\.css$/.test(file);
     });
     
     return files_;

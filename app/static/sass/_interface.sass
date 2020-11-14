@@ -11,7 +11,8 @@ body
 .title
     font-weight: 700
     font-family: 'Montserrat'
-    font-size: 35px        
+    font-size: 35px  
+    line-height: 43px      
 
 .btn-white
     cursor: pointer
@@ -38,3 +39,23 @@ body
         background-color: transparent
         color: #1448B6
         border: 1px solid var(--color-blue)
+
+.swipe-info
+    display: none
+    padding: 0 10px 20px
+    align-items: center
+    +sm-block
+        display: flex
+    &__text
+        white-space: nowrap
+        line-height: 22px
+        color: var(--color-orange)
+        font-size: 16px
+    &__arrow
+        flex-grow: 1
+    &__img
+        width: 100%
+        
+
+    
+
