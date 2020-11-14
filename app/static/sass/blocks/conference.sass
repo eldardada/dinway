@@ -1,0 +1,35 @@
+.conference
+    &__title
+        +visually-hidden 
+    
+
+.conference
+    &__container
+        display: grid
+        grid-template-columns: 1fr 758px
+        grid-column-gap: 30px
+        align-items: center
+    &-text
+        position: relative
+        &__item
+            font-size: 16px
+            line-height: 22px
+            &:not(:last-child)
+                margin-bottom: 20px
+    &-img
+        position: relative
+        &__video
+            position: absolute
+            left: 50%
+            top: 170px
+            width: 260px
+            height: 162px
+            display: flex
+            justify-content: center
+            background: url('static/img/video-bg.jpg')
+            transform: translateX(-50%)
+    &__arrow
+        position: absolute
+        left: 50px
+        +bp900-block
+            display: none

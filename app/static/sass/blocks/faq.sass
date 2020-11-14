@@ -1,0 +1,37 @@
+.faq
+    &__title
+        text-align: center
+        margin-bottom: 80px
+
+.questions
+    &__item
+        border: 2px solid transparent
+        border-radius: 36px
+        &:not(:last-child)
+            margin-bottom: 40px
+        &.active
+            border: 2px solid #EBF1FE
+            border-top: 2px solid transparent
+            .question__arrow
+                transform: rotate(180deg)
+
+
+.question
+    display: flex
+    cursor: pointer
+    justify-content: space-between
+    background-color: #EBF1FE
+    padding: 22px 64px
+    border-radius: 36px
+    &__arrow
+        transform-origin: center
+        transition: transform .3s
+
+.answer
+    height: 0
+    overflow: hidden
+    transition: height .3s
+    &__container
+        padding: 20px 66px
+        line-height: 22px
+

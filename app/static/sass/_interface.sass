@@ -55,6 +55,25 @@ body
         flex-grow: 1
     &__img
         width: 100%
+
+
+.link_orange
+    color: var(--color-orange)
+    position: relative
+    text-decoration: none
+    &::after
+        content: ''
+        display: block
+        position: absolute
+        bottom: -1px
+        left: 0
+        width: 100%
+        height: 1px
+        background-color: currentColor
+    &:hover
+        color: var(--color-blue)
+        &::after
+            width: 0
         
 
     

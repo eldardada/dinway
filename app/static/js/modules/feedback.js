@@ -1,4 +1,5 @@
-import Swiper from 'swiper/bundle';
+import {Swiper, Navigation} from 'swiper';
+Swiper.use([Navigation]);
 
 export const feedback = () => {
     const feedback = document.querySelector('.feedback');
