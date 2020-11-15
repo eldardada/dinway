@@ -10,13 +10,14 @@ import feedback from './modules/feedback.js';
 import why from './modules/why.js';
 import team from './modules/team.js';
 import faq from './modules/faq.js';
+import news from './modules/news.js';
 
 window.addEventListener('load', function() {
-
     bizes();
     menu();
     why();
     feedback();
     team();
     faq();
+    news();
 });

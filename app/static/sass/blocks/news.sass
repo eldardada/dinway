@@ -1,9 +1,89 @@
 .news
+    &__container
+        position: relative
+
     &__title
         text-align: center
+        margin-bottom: 74px
     &__link
         text-decoration: none
         color: var(--color-orange)
         &:hover
             color: var(--color-blue)
-    
+
+.news-slider
+    padding: 0 20px
+    position: relative
+    &__prev, &__next
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        +sm-block
+            display: none
+    &__prev
+        left: 0
+    &__next
+        right: 0
+
+.news-block
+    height: 436px
+    background-size: cover
+    background-repeat: no-repeat
+    border-radius: 26px
+    position: relative
+    +bp900-block
+        border-radius: 15px
+        height: 284px
+    &__article
+        position: absolute
+        left: 0
+        right: 0
+        bottom: 0
+
+
+.news-article
+    border-radius: 26px
+    background-color: #fff
+    top: 50%
+    bottom: 0
+    padding: 35px
+    box-sizing: border-box
+    border: 1px solid #EBF1FE
+    +bp900-block
+        border-radius: 15px
+        padding: 20px  15px
+    &__header
+        display: flex
+        justify-content: space-between
+        margin-bottom: 27px
+        +bp900-block
+            margin-bottom: 17px
+    &__category
+        text-transform: uppercase
+        color: #DBAF5C
+        +bp900-block
+            font-size: 9px
+    &__time
+        color: rgba(0, 0, 0, 0.3)
+        +bp900-block
+            font-size: 8px
+    &__title
+        font-weight: 600
+        font-size: 24px
+        line-height: 33px
+        margin-bottom: 14px
+        +bp900-block
+            margin-bottom: 9px
+            font-size: 15px
+    &__text
+        overflow: hidden
+        height: 44px
+        font-weight: 300
+        line-height: 22px
+        font-size: 16px
+        +bp900-block
+            height: 28px
+            font-size: 10px
+            line-height: 14px
+
+
