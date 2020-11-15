@@ -16,7 +16,7 @@ export const news = () => {
 
             },
             breakpoints: {
-                340: {
+                470: {
                     slidesPerView: 1.7,
                 },
                 576: {

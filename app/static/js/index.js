@@ -11,6 +11,7 @@ import why from './modules/why.js';
 import team from './modules/team.js';
 import faq from './modules/faq.js';
 import news from './modules/news.js';
+import video from './modules/video.js';
 
 window.addEventListener('load', function() {
     bizes();
@@ -20,4 +21,5 @@ window.addEventListener('load', function() {
     team();
     faq();
     news();
+    video();
 });

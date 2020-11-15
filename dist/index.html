@@ -38,30 +38,44 @@
             </div>
             <div class="hero-img">
                 <picture>
-                    <source srcset="static/img/hero-img.svg"
+                    <source srcset="static/img/hero-img.jpg"
                             media="(min-width: 901px)">
                     <source srcset="static/img/hero-img-md.svg"
                             media="(min-width: 451px)">
                     <img class="hero-img__img" src="static/img/hero-img-sm.svg" alt="Фон" aria-hidden="true">
                 </picture>
                 <div class="hero-img__video">
-                    <svg class="play" viewBox="0 0 66 67" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g filter="url(#filter0_d)">
-                            <path class="main" fill-rule="evenodd" clip-rule="evenodd" d="M33 58.5C16.9837 58.5 4 45.5163 4 29.5C4 13.4837 16.9837 0.5 33 0.5C49.0163 0.5 62 13.4837 62 29.5C62 45.5163 49.0163 58.5 33 58.5ZM27.2 41.272L41.12 29.8866L27.2 18.5013L27.2 41.272Z" fill="inherit"/>
-                        </g>
-                        <defs>
-                            <filter id="filter0_d" x="0" y="0.5" width="66" height="66" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
-                                <feOffset dy="4"/>
-                                <feGaussianBlur stdDeviation="2"/>
-                                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-                                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
-                                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
-                            </filter>
-                        </defs>
-                    </svg>
-                    <!-- <img class="play" src="static/img/play.svg" alt="play"> -->
+                    <div class="video">
+                        <iframe class="video__embed" width="100%" height="100%"
+                            src="https://www.youtube.com/embed/4JS70KB9GS0"></iframe>
+                        <a class="video__link" href="https://youtu.be/4JS70KB9GS0">
+                            <picture>
+                                <source srcset="https://i.ytimg.com/vi_webp/4JS70KB9GS0/maxresdefault.webp" type="image/webp">
+                                <img class="video__media" src="https://i.ytimg.com/vi/4JS70KB9GS0/maxresdefault.jpg" alt="1. Пилот, разборы, ответы и лайвы">
+                            </picture>
+                        </a>
+                        <button class="video__button" aria-label="Запустить видео">
+                            <svg width="68" height="48" viewBox="0 0 68 48"><path class="video__button-shape" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"></path><path class="video__button-icon" d="M 45,24 27,14 27,34"></path></svg>
+                        </button>
+                    </div>
+                    <a href="#" targe="_blank">
+                        <svg viewBox="0 0 66 67" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g filter="url(#filter0_d)">
+                                <path class="main" fill-rule="evenodd" clip-rule="evenodd" d="M33 58.5C16.9837 58.5 4 45.5163 4 29.5C4 13.4837 16.9837 0.5 33 0.5C49.0163 0.5 62 13.4837 62 29.5C62 45.5163 49.0163 58.5 33 58.5ZM27.2 41.272L41.12 29.8866L27.2 18.5013L27.2 41.272Z" fill="inherit"/>
+                            </g>
+                            <defs>
+                                <filter id="filter0_d" x="0" y="0.5" width="66" height="66" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+                                    <feOffset dy="4"/>
+                                    <feGaussianBlur stdDeviation="2"/>
+                                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+                                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+                                </filter>
+                            </defs>
+                        </svg>
+                    </a>
                     <p class="desc">видео о компании</p>
                 </div>
             </div>
@@ -77,13 +91,23 @@
         <h2 class="title about__title">О компании</h2>
         <div class="about-img">
             <img src="static/img/about-img.png" alt="Компания">
-            <div class="about-img__video">
-                <img class="play" src="static/img/play.svg" alt="play">
+            <div class="about-img__video video">
+                <iframe class="video__embed" width="100%" height="100%"
+                            src="https://www.youtube.com/embed/4JS70KB9GS0"></iframe>
+                <a class="video__link" href="https://youtu.be/4JS70KB9GS0">
+                    <picture>
+                        <source srcset="https://i.ytimg.com/vi_webp/4JS70KB9GS0/maxresdefault.webp" type="image/webp">
+                        <img class="video__media" src="https://i.ytimg.com/vi/4JS70KB9GS0/maxresdefault.jpg" alt="1. Пилот, разборы, ответы и лайвы">
+                    </picture>
+                </a>
+                <button class="video__button" aria-label="Запустить видео">
+                    <svg width="68" height="48" viewBox="0 0 68 48"><path class="video__button-shape" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"></path><path class="video__button-icon" d="M 45,24 27,14 27,34"></path></svg>
+                </button>
             </div>
         </div>
         <div class="about-text">
             <p class="about-text__item">Мы предлагаем инструменты для создания и масштабирования бизнеса, личностного роста и образования. В общем, всё то, что может изменить вашу жизнь к лучшему.</p>
-            <p class="about-text__item">Наша формула — <strong class="about-text__strong">IT+MLM+Invest. </strong>Смотрите подробнее в <a class="about-text__link" href="#">видео ролике</a></p>
+            <p class="about-text__item">Наша формула — <strong class="about-text__strong">IT+MLM+Invest. </strong>Смотрите подробнее в <a class="link_orange" href="#">видео ролике</a></p>
         </div>
         <img class="about__arrow" src="static/img/about-arrow.svg" alt="">
     </div>
@@ -207,35 +231,96 @@
             <div class="swiper-container">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <div class="review">
-                            <img class="play" src="static/img/play.svg" alt="play">
+                        <div class="review video">
+                            <iframe class="video__embed" width="100%" height="100%"
+                            src="https://www.youtube.com/embed/4JS70KB9GS0"></iframe>
+                            <a class="video__link" href="https://youtu.be/4JS70KB9GS0">
+                                <picture>
+                                    <source srcset="https://i.ytimg.com/vi_webp/4JS70KB9GS0/maxresdefault.webp" type="image/webp">
+                                    <img class="video__media" src="https://i.ytimg.com/vi/4JS70KB9GS0/maxresdefault.jpg" alt="1. Пилот, разборы, ответы и лайвы">
+                                </picture>
+                            </a>
+                            <button class="video__button" aria-label="Запустить видео">
+                                <svg width="68" height="48" viewBox="0 0 68 48"><path class="video__button-shape" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"></path><path class="video__button-icon" d="M 45,24 27,14 27,34"></path></svg>
+                            </button>
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="review">
-                            <img class="play" src="static/img/play.svg" alt="play">
+                        <div class="review video">
+                            <iframe class="video__embed" width="100%" height="100%"
+                            src="https://www.youtube.com/embed/4JS70KB9GS0"></iframe>
+                            <a class="video__link" href="https://youtu.be/4JS70KB9GS0">
+                                <picture>
+                                    <source srcset="https://i.ytimg.com/vi_webp/4JS70KB9GS0/maxresdefault.webp" type="image/webp">
+                                    <img class="video__media" src="https://i.ytimg.com/vi/4JS70KB9GS0/maxresdefault.jpg" alt="1. Пилот, разборы, ответы и лайвы">
+                                </picture>
+                            </a>
+                            <button class="video__button" aria-label="Запустить видео">
+                                <svg width="68" height="48" viewBox="0 0 68 48"><path class="video__button-shape" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"></path><path class="video__button-icon" d="M 45,24 27,14 27,34"></path></svg>
+                            </button>
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="review">
-                            <img class="play" src="static/img/play.svg" alt="play">
+                        <div class="review video">
+                            <iframe class="video__embed" width="100%" height="100%"
+                            src="https://www.youtube.com/embed/4JS70KB9GS0"></iframe>
+                            <a class="video__link" href="https://youtu.be/4JS70KB9GS0">
+                                <picture>
+                                    <source srcset="https://i.ytimg.com/vi_webp/4JS70KB9GS0/maxresdefault.webp" type="image/webp">
+                                    <img class="video__media" src="https://i.ytimg.com/vi/4JS70KB9GS0/maxresdefault.jpg" alt="1. Пилот, разборы, ответы и лайвы">
+                                </picture>
+                            </a>
+                            <button class="video__button" aria-label="Запустить видео">
+                                <svg width="68" height="48" viewBox="0 0 68 48"><path class="video__button-shape" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"></path><path class="video__button-icon" d="M 45,24 27,14 27,34"></path></svg>
+                            </button>
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="review">
-                            <img class="play" src="static/img/play.svg" alt="play">
+                        <div class="review video">
+                            <iframe class="video__embed" width="100%" height="100%"
+                            src="https://www.youtube.com/embed/4JS70KB9GS0"></iframe>
+                            <a class="video__link" href="https://youtu.be/4JS70KB9GS0">
+                                <picture>
+                                    <source srcset="https://i.ytimg.com/vi_webp/4JS70KB9GS0/maxresdefault.webp" type="image/webp">
+                                    <img class="video__media" src="https://i.ytimg.com/vi/4JS70KB9GS0/maxresdefault.jpg" alt="1. Пилот, разборы, ответы и лайвы">
+                                </picture>
+                            </a>
+                            <button class="video__button" aria-label="Запустить видео">
+                                <svg width="68" height="48" viewBox="0 0 68 48"><path class="video__button-shape" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"></path><path class="video__button-icon" d="M 45,24 27,14 27,34"></path></svg>
+                            </button>
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="review">
-                            <img class="play" src="static/img/play.svg" alt="play">
+                        <div class="review video">
+                            <iframe class="video__embed" width="100%" height="100%"
+                            src="https://www.youtube.com/embed/4JS70KB9GS0"></iframe>
+                            <a class="video__link" href="https://youtu.be/4JS70KB9GS0">
+                                <picture>
+                                    <source srcset="https://i.ytimg.com/vi_webp/4JS70KB9GS0/maxresdefault.webp" type="image/webp">
+                                    <img class="video__media" src="https://i.ytimg.com/vi/4JS70KB9GS0/maxresdefault.jpg" alt="1. Пилот, разборы, ответы и лайвы">
+                                </picture>
+                            </a>
+                            <button class="video__button" aria-label="Запустить видео">
+                                <svg width="68" height="48" viewBox="0 0 68 48"><path class="video__button-shape" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"></path><path class="video__button-icon" d="M 45,24 27,14 27,34"></path></svg>
+                            </button>
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="review">
-                            <img class="play" src="static/img/play.svg" alt="play">
+                        <div class="review video">
+                            <iframe class="video__embed" width="100%" height="100%"
+                            src="https://www.youtube.com/embed/4JS70KB9GS0"></iframe>
+                            <a class="video__link" href="https://youtu.be/4JS70KB9GS0">
+                                <picture>
+                                    <source srcset="https://i.ytimg.com/vi_webp/4JS70KB9GS0/maxresdefault.webp" type="image/webp">
+                                    <img class="video__media" src="https://i.ytimg.com/vi/4JS70KB9GS0/maxresdefault.jpg" alt="1. Пилот, разборы, ответы и лайвы">
+                                </picture>
+                            </a>
+                            <button class="video__button" aria-label="Запустить видео">
+                                <svg width="68" height="48" viewBox="0 0 68 48"><path class="video__button-shape" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"></path><path class="video__button-icon" d="M 45,24 27,14 27,34"></path></svg>
+                            </button>
                         </div>
                     </div>
+                    
                 </div>
             </div>
             <svg class="feedback-slider__next" width="9" height="13" viewBox="0 0 9 13" xmlns="http://www.w3.org/2000/svg">
@@ -378,7 +463,7 @@
         </div>
     </div>
 </section>
-        <section class="conference">
+        <section class="conference section">
 
     <h2 class="conference__title title visueally-hidden" aria-label="hidden">Конференция</h2>
     <div class="container conference__container">
@@ -389,12 +474,22 @@
         </div>
         <div class="conference-img">
             <picture>
-                <source media="(min-width: 576px)"
+                <source media="(min-width: 900px)"
                         srcset="static/img/conference-img.svg">
-                    <img src="static/img/conference-img-md.svg" alt="">
+                    <img class="conference-img__image" src="static/img/conference-img-md.svg" alt="">
             </picture>
-            <div class="conference-img__video">
-                <img class="play" src="static/img/play.svg" alt="play">
+            <div class="conference-img__video video">
+                <iframe class="video__embed" width="100%" height="100%"
+                            src="https://www.youtube.com/embed/4JS70KB9GS0"></iframe>
+                <a class="video__link" href="https://youtu.be/4JS70KB9GS0">
+                    <picture>
+                        <source srcset="https://i.ytimg.com/vi_webp/4JS70KB9GS0/maxresdefault.webp" type="image/webp">
+                        <img class="video__media" src="https://i.ytimg.com/vi/4JS70KB9GS0/maxresdefault.jpg" alt="1. Пилот, разборы, ответы и лайвы">
+                    </picture>
+                </a>
+                <button class="video__button" aria-label="Запустить видео">
+                    <svg width="68" height="48" viewBox="0 0 68 48"><path class="video__button-shape" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"></path><path class="video__button-icon" d="M 45,24 27,14 27,34"></path></svg>
+                </button>
             </div>
         </div>
     </div>
@@ -538,9 +633,10 @@
     </main>
 
     <footer class="footer">
-    <svg class="footer__wave"  viewBox="0 0 1360 108" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path stroke="none" d="M300 68.0007C203.6 64.8007 60.5 92.334 1 106.501L0 107.5L1361 106.501C1362 73.5006 1363.4 6.40033 1361 2.00033C1358 -3.49967 1164 33.5001 1160.5 29.5001C1157 25.5001 961.5 74.0001 906.5 80.0001C851.5 86.0001 723.5 88.5001 691.5 89.5001C659.5 90.5001 510 80.0001 499 80.0001C488 80.0001 420.5 72.0007 300 68.0007Z" stroke="black"/>
+    <svg class="footer__wave" viewBox="0 0 1360 108" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M200.5 70.9986C117.3 75.3986 32.1667 97.1653 0 107.499H1359.5V1.49899C1328.5 0.49899 978.433 69.8401 886 82.5013C813 92.5006 642.5 88.4982 575.5 85.9982C537 82.4982 483.5 78.9982 450.5 75.9986C418.468 73.087 304.5 65.4986 200.5 70.9986Z" stroke="none"/>
     </svg>
+        
     <div class="container footer__container">
         <div class="footer-text">
             <h2 class="footer__title">Контакты</h2>

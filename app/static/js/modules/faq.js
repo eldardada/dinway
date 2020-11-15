@@ -159,6 +159,7 @@ export const faq = () => {
 
         btnMore.addEventListener('click', showMore);
         btnClose.addEventListener('click', generateQuestions);
+        window.addEventListener('resize', generateQuestions);
     }
 };
 

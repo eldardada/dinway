@@ -16,11 +16,12 @@ export const team = () => {
                 576: {
                     slidesPerView: 3,
                 },
-                968: {
-                    slidesPerView: 4,
-                },
                 825: {
                     slidesPerView: 4,
+                },
+                968: {
+                    slidesPerView: 4,
+                    allowTouchMove: false
                 },
             }
         });

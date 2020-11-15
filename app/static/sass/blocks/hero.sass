@@ -9,6 +9,8 @@
         padding-top: $offset
         padding-bottom: $offset
         overflow: hidden
+        +bp900-block
+            height: initial
     &-content
         display: grid
         grid-template-columns: 1fr 4fr
@@ -44,26 +46,19 @@
                 z-index: -2
         &__video
             position: absolute
-            display: flex
-            align-items: center
-            justify-content: center
             left: 5.4%
             height: 42%
-            width: 42%
+            width: 45%
             top: 50%
             border: 2px solid var(--color-orange)
             transform: translateY(calc(-50% - 10px))
             background-color: #fff
             border-radius: 10px
-            .main
-                fill: #fff
-            .desc
+            overflow: hidden
+            .play
                 display: none
-                font-size: 12px
-                max-width: 61px
-                text-align: center
-                color: #DCAF54
-                font-weight: 600
+                +xs-block
+                    display: block
             +bp900-block
                 left: 0
                 height: 42.5%
@@ -83,19 +78,30 @@
                     fill: #DCAF54
                 .desc
                     display: block
-
-            .play
-                cursor: pointer
-                width: 33%
+            .video
+                width: 100%
+                height: 100%
                 +xs-block
-                    min-width: 54px
-                    min-height: 54px
+                    display: none
+            .main
+                fill: #fff
+            .desc
+                display: none
+                font-size: 12px
+                max-width: 61px
+                text-align: center
+                color: #DCAF54
+                font-weight: 600
+            
     &-btns
         position: relative
         grid-row: 2/3
         grid-column: 1/2
         display: flex
         margin-top: 70px
+        +xs-block
+            margin-top: 0
+
         +bp900-block
             grid-column: 1/3
             grid-row: 3/4

@@ -1,7 +1,6 @@
 .conference
     &__title
-        +visually-hidden 
-    
+        +visually-hidden
 
 .conference
     &__container
@@ -26,16 +25,37 @@
         position: relative
         +sm-block
             height: 300px
+        +xs-block
+            height: 200px
         &__video
             position: absolute
             left: 50%
             top: 30%
-            width: 260px
-            height: 162px
+            width: 50%
+            height: 40%
             display: flex
             justify-content: center
             background: url('static/img/video-bg.jpg')
             transform: translateX(-50%)
+            border-radius: 15px
+            overflow: hidden
+            border: 2px solid var(--color-orange)
+            +bp900-block
+                height: 230px
+            +sm-block
+                top: initial
+                left: initial
+                right: initial
+                position: relative
+                transform: initial
+                margin: 0 auto
+                width: 90%
+                height: 250px
+            +xs-block
+                height: 200px
+        &__image
+            +sm-block
+                display: none
     &__arrow
         position: absolute
         left: 50px
