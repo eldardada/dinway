@@ -8,7 +8,11 @@
             <img class="conference__arrow" src="static/img/orange-arrow-right.svg" alt="">
         </div>
         <div class="conference-img">
-            <img src="static/img/conference-img.svg" alt="">
+            <picture>
+                <source media="(min-width: 576px)"
+                        srcset="static/img/conference-img.svg">
+                    <img src="static/img/conference-img-md.svg" alt="">
+            </picture>
             <div class="conference-img__video">
                 <img class="play" src="static/img/play.svg" alt="play">
             </div>

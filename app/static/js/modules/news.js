@@ -10,9 +10,14 @@ export const news = () => {
         const newsSlider = new Swiper('.news-slider .swiper-container', {
             slidesPerView: 1.3,
             spaceBetween: 20,
+            navigation: {
+                nextEl: '.news-slider__next',
+                prevEl: '.news-slider__prev',
+
+            },
             breakpoints: {
-                375: {
-                    slidesPerView: 1.8,
+                340: {
+                    slidesPerView: 1.7,
                 },
                 576: {
                     slidesPerView: 2,

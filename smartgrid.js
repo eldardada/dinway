@@ -23,7 +23,6 @@ const smartgridSettings = {
         bp1050: {
             width: "1050px",
         },
-        
         bp900: {
             width: "900px",
         },

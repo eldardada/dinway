@@ -1,10 +1,11 @@
 .news
     &__container
         position: relative
-
     &__title
         text-align: center
         margin-bottom: 74px
+        +sm-block
+            text-align: left
     &__link
         text-decoration: none
         color: var(--color-orange)
@@ -15,9 +16,13 @@
     padding: 0 20px
     position: relative
     &__prev, &__next
+        cursor: pointer
         position: absolute
         top: 50%
         transform: translateY(-50%)
+        z-index: 10
+        &.swiper-button-disabled
+            fill: gray
         +sm-block
             display: none
     &__prev

@@ -2,7 +2,27 @@
     &__title
         text-align: center
         margin-bottom: 80px
-
+        +sm-block
+            text-align: left
+    &__btn
+        display: block
+        cursor: pointer
+        font-size: 16px
+        margin: 30px auto 0
+        color: var(--color-orange)
+        padding: 0
+        border: none
+        background-color: transparent
+        position: relative
+        &::after
+            content: ''
+            display: block
+            position: absolute
+            width: 100%
+            height: 1px
+            margin-top: 15px
+            background-color: var(--color-orange)
+            
 .questions
     &__item
         border: 2px solid transparent
@@ -18,14 +38,23 @@
 
 .question
     display: flex
+    align-items: center
     cursor: pointer
-    justify-content: space-between
     background-color: #EBF1FE
     padding: 22px 64px
     border-radius: 36px
+    position: relative
+    +sm-block
+        padding: 22px 20px
+        padding-right: 40px
     &__arrow
+        position: absolute
+        right: 60px
         transform-origin: center
         transition: transform .3s
+        +sm-block
+            right: 20px
+    
 
 .answer
     height: 0
@@ -34,4 +63,7 @@
     &__container
         padding: 20px 66px
         line-height: 22px
+        +sm-block
+            padding: 20px
+        
 

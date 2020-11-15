@@ -201,9 +201,9 @@
             </span>            
         </div>
         <div class="feedback-slider">
-            <div class="feedback-slider__prev">
-                <img src="static/img/feedback-arrow-left.svg" alt="Arrow left">
-            </div>
+            <svg class="feedback-slider__prev" width="9" height="13" viewBox="0 0 9 13" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.39247 5.0931C0.62112 5.87244 0.62112 7.12756 1.39247 7.90691L5.57851 12.1363C6.83543 13.4063 9 12.5162 9 10.7294L9 2.27058C9 0.483798 6.83543 -0.406268 5.57851 0.863675L1.39247 5.0931Z" fill="inherit"/>
+            </svg>    
             <div class="swiper-container">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
@@ -238,9 +238,9 @@
                     </div>
                 </div>
             </div>
-            <div class="feedback-slider__next">
-                <img src="static/img/feedback-arrow-right.svg" alt="Arrow left">
-            </div>
+            <svg class="feedback-slider__next" width="9" height="13" viewBox="0 0 9 13" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.60753 5.0931C8.37888 5.87244 8.37888 7.12756 7.60753 7.90691L3.42149 12.1363C2.16457 13.4063 2.29692e-06 12.5162 2.04843e-06 10.7294L8.72056e-07 2.27058C6.23566e-07 0.483798 2.16457 -0.406268 3.42149 0.863675L7.60753 5.0931Z"/>
+            </svg>
         </div>
     </div>
 </section>
@@ -378,7 +378,27 @@
         </div>
     </div>
 </section>
-        
+        <section class="conference">
+
+    <h2 class="conference__title title visueally-hidden" aria-label="hidden">Конференция</h2>
+    <div class="container conference__container">
+        <div class="conference-text">
+            <p class="conference-text__item">Проект имеет команду разработки, маркетинга, и совет директоров. Благодаря отлаженной системе управления мы разрабатываем качественные продукты с большой скоростью..</p>
+            <p class="conference-text__item">Посмотрите <a class="link_orange" href="#">видео </a> о том, как руководитель компании проводит конференцию с командой</p>
+            <img class="conference__arrow" src="static/img/orange-arrow-right.svg" alt="">
+        </div>
+        <div class="conference-img">
+            <picture>
+                <source media="(min-width: 576px)"
+                        srcset="static/img/conference-img.svg">
+                    <img src="static/img/conference-img-md.svg" alt="">
+            </picture>
+            <div class="conference-img__video">
+                <img class="play" src="static/img/play.svg" alt="play">
+            </div>
+        </div>
+    </div>
+</section>
         <section class="faq section">
     <div class="container faq__container">
         <h2 class="title faq__title">Часто задаваемые вопросы</h2>
@@ -450,6 +470,7 @@
             </div>
             
         </div>
+        <button class="faq__btn">Ещё...</button>
     </div>
 </section>
         <section class="section news">
@@ -462,9 +483,9 @@
             </span>            
         </div>
         <div class="news-slider">
-            <div class="news-slider__prev">
-                <img src="static/img/feedback-arrow-left.svg" alt="Arrow left">
-            </div>
+            <svg class="news-slider__prev" width="9" height="13" viewBox="0 0 9 13" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.39247 5.0931C0.62112 5.87244 0.62112 7.12756 1.39247 7.90691L5.57851 12.1363C6.83543 13.4063 9 12.5162 9 10.7294L9 2.27058C9 0.483798 6.83543 -0.406268 5.57851 0.863675L1.39247 5.0931Z" fill="inherit"/>
+            </svg>  
             <div class="swiper-container">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
@@ -506,21 +527,87 @@
                                 <p class="news-article__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed repellendus rem recusandae delectus excepturi minus labore atque obcaecati id nostrum veniam, commodi cupiditate mollitia voluptas distinctio magnam at, eius ipsa.</p>
                             </article>
                         </div>
+                    </div><div class="swiper-slide">
+                        <div class="news-block" style="background-image: url('static/img/news/news-article-img-1.jpg');">
+                            <article class="news-block__article news-article">
+                                <div class="news-article__header">
+                                    <strong class="news-article__category">отзывы клиентов</strong>
+                                    <span class="news-article__time">6 min</span>
+                                </div>
+                                <h3 class="news-article__title">Название поста</h3>
+                                <p class="news-article__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed repellendus rem recusandae delectus excepturi minus labore atque obcaecati id nostrum veniam, commodi cupiditate mollitia voluptas distinctio magnam at, eius ipsa.</p>
+                            </article>
+                        </div>
+                    </div><div class="swiper-slide">
+                        <div class="news-block" style="background-image: url('static/img/news/news-article-img-1.jpg');">
+                            <article class="news-block__article news-article">
+                                <div class="news-article__header">
+                                    <strong class="news-article__category">отзывы клиентов</strong>
+                                    <span class="news-article__time">6 min</span>
+                                </div>
+                                <h3 class="news-article__title">Название поста</h3>
+                                <p class="news-article__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed repellendus rem recusandae delectus excepturi minus labore atque obcaecati id nostrum veniam, commodi cupiditate mollitia voluptas distinctio magnam at, eius ipsa.</p>
+                            </article>
+                        </div>
                     </div>
-                   
-                   
                     
                 </div>
             </div>
-            <div class="news-slider__next">
-                <img src="static/img/feedback-arrow-right.svg" alt="Arrow left">
-            </div>
+            <svg class="news-slider__next" width="9" height="13" viewBox="0 0 9 13" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.60753 5.0931C8.37888 5.87244 8.37888 7.12756 7.60753 7.90691L3.42149 12.1363C2.16457 13.4063 2.29692e-06 12.5162 2.04843e-06 10.7294L8.72056e-07 2.27058C6.23566e-07 0.483798 2.16457 -0.406268 3.42149 0.863675L7.60753 5.0931Z"/>
+            </svg>
         </div>
     </div>
 </section>
     </main>
+
     <footer class="footer">
+    <svg class="footer__wave"  viewBox="0 0 1360 108" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path stroke="none" d="M300 68.0007C203.6 64.8007 60.5 92.334 1 106.501L0 107.5L1361 106.501C1362 73.5006 1363.4 6.40033 1361 2.00033C1358 -3.49967 1164 33.5001 1160.5 29.5001C1157 25.5001 961.5 74.0001 906.5 80.0001C851.5 86.0001 723.5 88.5001 691.5 89.5001C659.5 90.5001 510 80.0001 499 80.0001C488 80.0001 420.5 72.0007 300 68.0007Z" stroke="black"/>
+    </svg>
     <div class="container footer__container">
+        <div class="footer-text">
+            <h2 class="footer__title">Контакты</h2>
+            <div class="social footer__social">
+                <a href="#" target="_blank">
+                    <svg class="social__insta social__icon icon_white">
+                        <use xlink:href="./static/img/svg/sprite.svg#insta"></use>
+                    </svg>
+                </a>
+                <a href="#" target="_blank">
+                    <svg class="social__whatsapp social__icon icon_white">
+                        <use xlink:href="./static/img/svg/sprite.svg#whatsapp"></use>
+                    </svg>
+                </a>
+                <a href="#" target="_blank">
+                    <svg class="social__telegram social__icon icon_white">
+                        <use xlink:href="./static/img/svg/sprite.svg#telegram"></use>
+                    </svg>
+                </a>
+                <a href="#" target="_blank">
+                    <svg class="social__youtube social__icon icon_white">
+                        <use xlink:href="./static/img/svg/sprite.svg#youtube"></use>
+                    </svg>
+                </a>
+                <a href="#" target="_blank">
+                    <svg class="social__fb social__icon icon_white">
+                        <use xlink:href="./static/img/svg/sprite.svg#fb"></use>
+                    </svg>
+                </a>
+                <a href="#" target="_blank">
+                    <svg class="social__vk social__icon icon_white">
+                        <use xlink:href="./static/img/svg/sprite.svg#vk"></use>
+                    </svg>
+                </a>
+            </div>
+            <h3 class="footer__descriptor">Не знаешь, как работать с продуктами?</h3>
+            <p class="footer__cta">Запишись на личную консультацию!</p>
+            <button class="btn-blue">Записаться</button>
+        </div>
+        
+        <div class="footer-img">
+            <img class="footer-img__image" src="static/img/footer/footer-img.svg" alt="Book">
+        </div>
 
     </div>
 </footer>

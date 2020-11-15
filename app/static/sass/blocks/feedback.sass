@@ -2,7 +2,9 @@
     padding-top: 150px
     &__title
         margin-bottom: 80px
+        text-align: center
         +sm-block
+            text-align: left
             margin-bottom: 40px
     &-slider
         position: relative
@@ -18,6 +20,8 @@
             transform: translateY(-50%)
             &:focus
                 outline: none
+            &.swiper-button-disabled
+                fill: gray
             +sm-block
                 display: none
         &__next

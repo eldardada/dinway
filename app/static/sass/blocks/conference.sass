@@ -6,11 +6,17 @@
 .conference
     &__container
         display: grid
-        grid-template-columns: 1fr 758px
+        grid-template-columns: repeat(auto-fill, minmax(375px, 1fr))
         grid-column-gap: 30px
         align-items: center
+        +bp900-block
+            grid-template-columns: 1fr
     &-text
         position: relative
+        +sm-block
+            max-width: 375px
+            justify-self: center
+            text-align: center
         &__item
             font-size: 16px
             line-height: 22px
@@ -18,10 +24,12 @@
                 margin-bottom: 20px
     &-img
         position: relative
+        +sm-block
+            height: 300px
         &__video
             position: absolute
             left: 50%
-            top: 170px
+            top: 30%
             width: 260px
             height: 162px
             display: flex
