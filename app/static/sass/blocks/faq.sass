@@ -4,16 +4,24 @@
         margin-bottom: 80px
         +sm-block
             text-align: left
+    &-btns
+        display: flex
+        justify-content: center
+        margin-top: 30px
     &__btn
-        display: block
         cursor: pointer
         font-size: 16px
-        margin: 30px auto 0
         color: var(--color-orange)
         padding: 0
         border: none
         background-color: transparent
         position: relative
+        &.close
+            display: none
+        &:focus
+            outline: none
+        &:not(:last-child)
+            margin-right: 30px
         &::after
             content: ''
             display: block

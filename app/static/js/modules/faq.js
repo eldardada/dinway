@@ -6,9 +6,136 @@ export const faq = () => {
     const faq = document.querySelector('.faq');
     
     if(faq) {
-        const questions = faq.querySelector('.questions');
+        const wrapper = document.querySelector('.questions');
+        let items = wrapper.querySelectorAll('.questions__item');
+        const btnMore = faq.querySelector('[data-more]');
+        const btnClose = faq.querySelector('[data-close]');
+        let counter = 0;
+        let startItemsCount = 0;
 
-        questions.addEventListener('click', e => {
+        const questionsItems = {
+            1: {
+                question: 'Какие гарантии долгосрочной работы компании?',
+                answer: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores voluptates impedit sit, veniam at itaque, officiis quas commodi blanditiis esse, recusandae eligendi velit excepturi obcaecati ipsum doloribus soluta! Soluta, aut!'
+            },
+            2: {
+                question: 'Какую сумму оптимально вкладывать?',
+                answer: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores voluptates impedit sit, veniam at itaque, officiis quas commodi blanditiis esse, recusandae eligendi velit excepturi obcaecati ipsum doloribus soluta! Soluta, aut!'
+            },
+            3: {
+                question: 'Могут ли поменяться условия для партнеров?',
+                answer: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores voluptates impedit sit, veniam at itaque, officiis quas commodi blanditiis esse, recusandae eligendi velit excepturi obcaecati ipsum doloribus soluta! Soluta, aut!'
+            },
+            4: {
+                question: 'Какой срок выхода в безубыток?',
+                answer: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores voluptates impedit sit, veniam at itaque, officiis quas commodi blanditiis esse, recusandae eligendi velit excepturi obcaecati ipsum doloribus soluta! Soluta, aut!'
+            },
+            5: {
+                question: 'Будет ли снижаться процент доходности?',
+                answer: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores voluptates impedit sit, veniam at itaque, officiis quas commodi blanditiis esse, recusandae eligendi velit excepturi obcaecati ipsum doloribus soluta! Soluta, aut!'
+            },
+            6: {
+                question: 'Какие гарантии долгосрочной работы компании?',
+                answer: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores voluptates impedit sit, veniam at itaque, officiis quas commodi blanditiis esse, recusandae eligendi velit excepturi obcaecati ipsum doloribus soluta! Soluta, aut!'
+            },
+            7: {
+                question: 'Какие гарантии долгосрочной работы компании?',
+                answer: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores voluptates impedit sit, veniam at itaque, officiis quas commodi blanditiis esse, recusandae eligendi velit excepturi obcaecati ipsum doloribus soluta! Soluta, aut!'
+            },
+            8: {
+                question: 'Какие гарантии долгосрочной работы компании?',
+                answer: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores voluptates impedit sit, veniam at itaque, officiis quas commodi blanditiis esse, recusandae eligendi velit excepturi obcaecati ipsum doloribus soluta! Soluta, aut!'
+            },
+            9: {
+                question: 'Какие гарантии долгосрочной работы компании?',
+                answer: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores voluptates impedit sit, veniam at itaque, officiis quas commodi blanditiis esse, recusandae eligendi velit excepturi obcaecati ipsum doloribus soluta! Soluta, aut!'
+            },
+            10: {
+                question: 'Какие гарантии долгосрочной работы компании?',
+                answer: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores voluptates impedit sit, veniam at itaque, officiis quas commodi blanditiis esse, recusandae eligendi velit excepturi obcaecati ipsum doloribus soluta! Soluta, aut!'
+            },
+            11: {
+                question: 'Какие гарантии долгосрочной работы компании?',
+                answer: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores voluptates impedit sit, veniam at itaque, officiis quas commodi blanditiis esse, recusandae eligendi velit excepturi obcaecati ipsum doloribus soluta! Soluta, aut!'
+            }
+        }
+
+        function createQuestion(questionText, answerText) {
+            const qItem = document.createElement('div');
+            qItem.className = 'questions__item';
+            qItem.innerHTML = `
+            <div class="questions__item">
+                <div class="question">
+                    <p class="question__text">${questionText}</p>
+                    <svg class="question__arrow" width="13" height="9" viewBox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.90691 7.60752C7.12756 8.37888 5.87244 8.37888 5.0931 7.60753L0.863676 3.42149C-0.406267 2.16457 0.483796 0 2.27058 0H10.7294C12.5162 0 13.4063 2.16457 12.1363 3.42148L7.90691 7.60752Z" fill="#001032"/>
+                    </svg>
+                </div>
+                <div class="answer">
+                    <div class="answer__container">${answerText}</div>
+                </div>
+            </div>`;
+            return qItem;
+        }
+
+        function removeQuestions() {
+            items = wrapper.querySelectorAll('.questions__item');
+            items.forEach(item => item.remove());
+        }
+
+        function getQuestions() {
+            let questions = [];
+
+            for(let item in questionsItems) {
+                const question = createQuestion(questionsItems[item].question, questionsItems[item].answer);
+                questions.push(question);
+            }
+
+            return questions;
+        }
+
+        function generateQuestions() {
+            removeQuestions();
+
+            const questions = getQuestions();
+            counter = 0;
+
+            if(window.innerWidth <= 576) {
+                for(let i = 0; i < 3 && i < questions.length; i++) {
+                    wrapper.append(questions[i]);
+                    counter++;
+                }
+            }
+            else {
+                for(let i = 0; i < 5 && i < questions.length; i++) {
+                    wrapper.append(questions[i]);
+                    counter++;
+                }
+            }
+            startItemsCount = counter;
+            btnClose.style.display = 'none';
+            btnMore.style.display = 'block';
+        }
+
+        function showMore() {
+            const questions = getQuestions();
+            const end = counter + 3;
+
+            for(let i = counter; i < end && i < questions.length; i++) {
+                wrapper.append(questions[i]);
+                counter++;
+            }
+            
+            if(counter > startItemsCount) {
+                btnClose.style.display = 'block';
+            }
+
+            if(counter == Object.keys(questionsItems).length) {
+                btnMore.style.display = 'none';
+            }
+        }
+
+        wrapper.addEventListener('click', e => {
             
             const question = e.target.closest('.question');
 
@@ -26,7 +153,12 @@ export const faq = () => {
                     questionItem.classList.add('active');
                 }
             }
-        })
+        });
+
+        generateQuestions();
+
+        btnMore.addEventListener('click', showMore);
+        btnClose.addEventListener('click', generateQuestions);
     }
 };
 
