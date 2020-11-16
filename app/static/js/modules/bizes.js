@@ -14,7 +14,8 @@ export const bizes = () => {
             spaceBetween: 20,
             breakpoints: {
                 730: {
-                    slidesPerView: 3
+                    slidesPerView: 3,
+                    allowTouchMove: false
                 }
             }
         };

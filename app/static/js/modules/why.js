@@ -24,6 +24,8 @@ export const why = () => {
                     slidesPerView: 2
                 },
                 900: {
+                    allowTouchMove: false,
+                    loop: false,
                     slidesPerView: 4,
                     slidesPerColumnFill: 'column',
                     slidesPerColumn: 1,

@@ -57,6 +57,18 @@ export const faq = () => {
             11: {
                 question: 'Какие гарантии долгосрочной работы компании?',
                 answer: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores voluptates impedit sit, veniam at itaque, officiis quas commodi blanditiis esse, recusandae eligendi velit excepturi obcaecati ipsum doloribus soluta! Soluta, aut!'
+            },
+            12: {
+                question: 'Какие гарантии долгосрочной работы компании?',
+                answer: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores voluptates impedit sit, veniam at itaque, officiis quas commodi blanditiis esse, recusandae eligendi velit excepturi obcaecati ipsum doloribus soluta! Soluta, aut!'
+            },
+            13: {
+                question: 'Какие гарантии долгосрочной работы компании?',
+                answer: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores voluptates impedit sit, veniam at itaque, officiis quas commodi blanditiis esse, recusandae eligendi velit excepturi obcaecati ipsum doloribus soluta! Soluta, aut!'
+            },
+            14: {
+                question: 'Какие гарантии долгосрочной работы компании?',
+                answer: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores voluptates impedit sit, veniam at itaque, officiis quas commodi blanditiis esse, recusandae eligendi velit excepturi obcaecati ipsum doloribus soluta! Soluta, aut!'
             }
         }
 
@@ -118,6 +130,7 @@ export const faq = () => {
         }
 
         function showMore() {
+            const startHeight = wrapper.offsetHeight;
             const questions = getQuestions();
             const end = counter + 3;
 
@@ -133,6 +146,25 @@ export const faq = () => {
             if(counter == Object.keys(questionsItems).length) {
                 btnMore.style.display = 'none';
             }
+            
+            const endHeigth = wrapper.offsetHeight;
+           
+            wrapper.style.height = startHeight + 'px';
+            wrapper.style.overflow = 'hidden';
+
+            let add = 0;
+            let timer = setInterval(function() {
+                add += 5;
+                wrapper.style.height = startHeight + add + 'px';
+
+                if (wrapper.offsetHeight >= endHeigth) {
+                    clearInterval(timer);
+                    wrapper.style.overflow = 'visible';
+                    wrapper.style.height = 'initial';
+                    return;
+                }
+
+            }, 15);
         }
 
         wrapper.addEventListener('click', e => {
