@@ -139,13 +139,6 @@ export const faq = () => {
                 counter++;
             }
             
-            if(counter > startItemsCount) {
-                btnClose.style.display = 'block';
-            }
-
-            if(counter == Object.keys(questionsItems).length) {
-                btnMore.style.display = 'none';
-            }
             
             const endHeigth = wrapper.offsetHeight;
            
@@ -161,6 +154,15 @@ export const faq = () => {
                     clearInterval(timer);
                     wrapper.style.overflow = 'visible';
                     wrapper.style.height = 'initial';
+
+                    if(counter > startItemsCount) {
+                        btnClose.style.display = 'block';
+                    }
+        
+                    if(counter == Object.keys(questionsItems).length) {
+                        btnMore.style.display = 'none';
+                    }
+                    
                     return;
                 }
 
