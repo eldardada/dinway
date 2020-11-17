@@ -130,7 +130,6 @@ export const faq = () => {
         }
 
         function showMore() {
-            const startHeight = wrapper.offsetHeight;
             const questions = getQuestions();
             const end = counter + 3;
 
@@ -138,37 +137,17 @@ export const faq = () => {
                 wrapper.append(questions[i]);
                 counter++;
             }
-            
-            
-            const endHeigth = wrapper.offsetHeight;
-           
-            wrapper.style.height = startHeight + 'px';
-            wrapper.style.overflow = 'hidden';
 
-            let add = 0;
+            btnMore.disabled = true;
+            btnMore.disabled = false;
             
-            let timer = setInterval(function() {
-                btnMore.style.disabled = true;
-                add += 5;
-                wrapper.style.height = startHeight + add + 'px';
+            if(counter > startItemsCount) {
+                btnClose.style.display = 'block';
+            }
 
-                if (wrapper.offsetHeight >= endHeigth) {
-                    clearInterval(timer);
-                    wrapper.style.overflow = 'visible';
-                    wrapper.style.height = 'initial';
-                    
-                    if(counter > startItemsCount) {
-                        btnClose.style.display = 'block';
-                    }
-        
-                    if(counter == Object.keys(questionsItems).length) {
-                        btnMore.style.display = 'none';
-                    }
-                    
-                    return;
-                }
-
-            }, 15);
+            if(counter == Object.keys(questionsItems).length) {
+                btnMore.style.display = 'none';
+            }
         }
 
         wrapper.addEventListener('click', e => {

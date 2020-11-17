@@ -21,8 +21,9 @@
         +bp1050-block
             grid-row-gap: 30px
             grid-template-areas: "text" "img" "btns"
+    &.hero_main .hero-content
         +xs-block
-            grid-template-areas: "text text""btns play"
+            grid-template-areas: "text text" "btns play"
     &-text
         grid-area: text
         +bp1050-block
@@ -95,7 +96,6 @@
     overflow: hidden
     &__media
         height: 100%
-        width: 100%
     &__play, &__desc
         display: none
         +xs-block
@@ -104,24 +104,6 @@
         width: 40%
         height: 41%
         top: 30%
-
-    &.active
-        transform: initial
-        position: fixed
-        top: 0
-        left: 0
-        padding: 5% 2%
-        height: initial
-        width: initial
-        bottom: 0
-        right: 0
-        background-color: rgba(0,0,0,0.7)
-        border: none
-        z-index: 800
-        display: flex
-        align-items: center
-        justify-content: center
-        overflow: auto
 
 .hero-play
     text-align: center
@@ -146,4 +128,7 @@
         min-height: 430px
     +xs-block
         display: block
+
+
+
     
