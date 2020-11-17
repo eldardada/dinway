@@ -146,7 +146,9 @@ export const faq = () => {
             wrapper.style.overflow = 'hidden';
 
             let add = 0;
+            
             let timer = setInterval(function() {
+                btnMore.style.disabled = true;
                 add += 5;
                 wrapper.style.height = startHeight + add + 'px';
 
@@ -154,7 +156,7 @@ export const faq = () => {
                     clearInterval(timer);
                     wrapper.style.overflow = 'visible';
                     wrapper.style.height = 'initial';
-
+                    
                     if(counter > startItemsCount) {
                         btnClose.style.display = 'block';
                     }

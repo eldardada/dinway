@@ -9,121 +9,63 @@
         padding-top: $offset
         padding-bottom: $offset
         overflow: hidden
-        +bp900-block
+        +bp1050-block
             height: initial
+            padding-bottom: 110px
+            align-items: end
     &-content
         display: grid
-        grid-template-columns: 1fr 4fr
-        grid-template-rows: 180px 54px 1fr
+        grid-template-areas: "text img" "btns img"
         align-items: center
-        grid-gap: 50px
-        +bp900-block
-            grid-gap: 10px
-            grid-template-rows: repeat(3, min-content)
+        grid-gap: 10px
+        +bp1050-block
+            grid-row-gap: 30px
+            grid-template-areas: "text" "img" "btns"
+        +xs-block
+            grid-template-areas: "text text""btns play"
     &-text
-        grid-row: 1/2
-        +bp900-block
-            grid-column: 1/3
-            grid-row: 1/2
+        grid-area: text
+        +bp1050-block
+            justify-self: center
     &-img
-        grid-row: 1/3
+        grid-area: img
         position: relative
-        display: flex
-        +bp900-block
-            grid-column: 1/3
-            grid-row: 2/3
+        +bp1050-block
+            padding-left: 150px
         +xs-block
-            grid-colmn: 1/3
+            display: none
         &__img
-            +bp900-block
-                display: block
-                margin-left: 30%
-                min-width: 711.71px
-                min-height: 457.74px
-                margin-top: -80px
-            +xs-block
-                margin-left: 25%
-                z-index: -2
-        &__video
-            position: absolute
-            left: 5.4%
-            height: 42%
-            width: 45%
-            top: 50%
-            border: 2px solid var(--color-orange)
-            transform: translateY(calc(-50% - 10px))
-            background-color: #fff
-            border-radius: 10px
-            overflow: hidden
-            .play
-                display: none
-                +xs-block
-                    display: block
-            +bp900-block
-                left: 0
-                height: 42.5%
-                width: 310px
-            +xs-block
-                background-color: transparent
-                border: 2px solid transparent
-                flex-direction: column
-                z-index: 2
-                left: initial
-                right: 8%
-                margin-top: 40px
-                width: 60px
-                .main
-                    min-height: 54px
-                    min-width: 54px
-                    fill: #DCAF54
-                .desc
-                    display: block
-            .video
-                width: 100%
-                height: 100%
-                +xs-block
-                    display: none
-            .main
-                fill: #fff
-            .desc
-                display: none
-                font-size: 12px
-                max-width: 61px
-                text-align: center
-                color: #DCAF54
-                font-weight: 600
-            
+            display: flex
+            +bp1050-block
+                margin-left: auto
     &-btns
+        grid-area: btns
         position: relative
-        grid-row: 2/3
-        grid-column: 1/2
         display: flex
-        margin-top: 70px
+        +bp1050-block
+            justify-self: center
         +xs-block
-            margin-top: 0
-
-        +bp900-block
-            grid-column: 1/3
-            grid-row: 3/4
-        +xs-block
-            grid-row: 2/3
-            grid-colmn: 1/2
             flex-direction: column
+            justify-self: start
+            width: 100%
         &__btn
+            font-weight: 700
             font-size: 16px
+            +sm-block   
+                padding: 15px 0
+                width: 180px
             +xs-block
-                max-width: 200px
-                width: 60%
-                padding: 16px 0
+                width: 100%
                 text-align: center
+                padding: 15px 0
         &__btn--2
             padding: 16px 54px
             color: var(--color-blue)
             margin-left: 30px
             +xs-block
                 margin-left: 0
-                margin-top: 20px
-.hero-title_main
+                margin-top: 10px
+.hero__title_main
     +font(130, 88)
     line-height: 1.3
     margin-left: -7px
@@ -131,13 +73,77 @@
     background: url("static/img/hero-title-mask.png") 0 0 / cover no-repeat
     -webkit-background-clip: text
     -webkit-text-fill-color: transparent
-    &__down
-        margin-left: auto
-        font-style: normal
-        font-weight: normal
-        color: #1448B6
-        
-.hero-subtitle
+    +xs-block
+        margin-top: 100px
+.hero__subtitle_main
     font-weight: 600
     color: var(--color-blue)
     +font(30, 24)
+    +bp1050-block
+        text-align: center
+    +xs-block
+        margin-bottom: 140px
+.hero-video
+    position: absolute
+    left: 3%
+    height: 32%
+    width: 35%
+    top: 20%
+    border: 2px solid var(--color-orange)
+    background-color: #fff
+    border-radius: 10px
+    overflow: hidden
+    &__media
+        height: 100%
+        width: 100%
+    &__play, &__desc
+        display: none
+        +xs-block
+            display: block
+    +bp1050-block
+        width: 40%
+        height: 41%
+        top: 30%
+
+    &.active
+        transform: initial
+        position: fixed
+        top: 0
+        left: 0
+        padding: 5% 2%
+        height: initial
+        width: initial
+        bottom: 0
+        right: 0
+        background-color: rgba(0,0,0,0.7)
+        border: none
+        z-index: 800
+        display: flex
+        align-items: center
+        justify-content: center
+        overflow: auto
+
+.hero-play
+    text-align: center
+    text-decoration: none
+    grid-area: play
+    display: none
+    position: relative
+    &__media
+        margin-bottom: 10px
+    &__desc
+        color: var(--color-orange)
+        font-size: 12px
+        line-height: 16px
+        max-width: 65px
+        margin: 0 auto
+    &__bg
+        position: absolute
+        z-index: -2
+        top: -200px
+        left: -40px
+        min-width: 500px
+        min-height: 430px
+    +xs-block
+        display: block
+    
