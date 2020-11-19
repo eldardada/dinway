@@ -7,7 +7,8 @@ export const faq = () => {
     
     if(faq) {
         const wrapper = document.querySelector('.questions');
-        let items = wrapper.querySelectorAll('.questions__item');
+        const questionsBlock = document.querySelector('.questions');
+        let items = questionsBlock.querySelectorAll('.questions__item');
         const btnMore = faq.querySelector('[data-more]');
         const btnClose = faq.querySelector('[data-close]');
         let counter = 0;
@@ -91,7 +92,7 @@ export const faq = () => {
         }
 
         function removeQuestions() {
-            items = wrapper.querySelectorAll('.questions__item');
+            items = questionsBlock.querySelectorAll('.questions__item');
             items.forEach(item => item.remove());
         }
 
@@ -114,13 +115,13 @@ export const faq = () => {
 
             if(window.innerWidth <= 576) {
                 for(let i = 0; i < 3 && i < questions.length; i++) {
-                    wrapper.append(questions[i]);
+                    questionsBlock.append(questions[i]);
                     counter++;
                 }
             }
             else {
                 for(let i = 0; i < 5 && i < questions.length; i++) {
-                    wrapper.append(questions[i]);
+                    questionsBlock.append(questions[i]);
                     counter++;
                 }
             }
@@ -133,24 +134,43 @@ export const faq = () => {
             const questions = getQuestions();
             const end = counter + 3;
 
+            const startHeight = questionsBlock.offsetHeight;
+            wrapper.style.height = startHeight + 'px';
+            wrapper.style.overflow = 'hidden';
+
             for(let i = counter; i < end && i < questions.length; i++) {
-                wrapper.append(questions[i]);
+                questionsBlock.append(questions[i]);
                 counter++;
             }
 
-            btnMore.disabled = true;
-            btnMore.disabled = false;
-            
-            if(counter > startItemsCount) {
-                btnClose.style.display = 'block';
-            }
+            const endHeight = questionsBlock.scrollHeight;
 
-            if(counter == Object.keys(questionsItems).length) {
-                btnMore.style.display = 'none';
-            }
+            wrapper.style.height = endHeight + 'px';
+
+            let add = 0;
+
+            let timer = setInterval(() => {
+                add += 5;
+                
+                wrapper.style.height = startHeight + add + 'px';
+
+                if(wrapper.offsetHeight >= endHeight) {
+                    clearInterval(timer);
+                    wrapper.style.height = 'initial';
+
+                    if(counter > startItemsCount) {
+                        btnClose.style.display = 'block';
+                    }
+        
+                    if(counter == Object.keys(questionsItems).length) {
+                        btnMore.style.display = 'none';
+                    }
+                }
+            }, 15);
+
         }
 
-        wrapper.addEventListener('click', e => {
+        questionsBlock.addEventListener('click', e => {
             
             const question = e.target.closest('.question');
 
@@ -172,8 +192,13 @@ export const faq = () => {
 
         generateQuestions();
 
-        btnMore.addEventListener('click', showMore);
-        btnClose.addEventListener('click', generateQuestions);
+        if(btnMore) {
+            btnMore.addEventListener('click', showMore);
+        }
+        if(btnClose) {
+            btnClose.addEventListener('click', generateQuestions);
+        }
+        
         window.addEventListener('resize', generateQuestions);
     }
 };
