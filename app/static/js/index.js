@@ -14,12 +14,12 @@ import news from './modules/news.js';
 import video from './modules/video.js';
 
 window.addEventListener('load', function() {
-    bizes();
+    video();
     menu();
+    bizes();
     why();
     feedback();
     team();
     faq();
     news();
-    video();
 });

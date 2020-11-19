@@ -1,3 +1,56 @@
+.video-block {
+    border: 2px solid var(--color-orange);
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    &.active {
+        border: 2px solid var(--color-orange);
+        overflow: auto;
+        max-height: 90%;
+        width: 90%;
+        max-width: 800px;
+        max-height: 500px;
+        z-index: 200;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        @include sm-block() {
+            max-height: 300px;
+        }
+        @include xs-block() {
+            max-height: 200px;
+        }
+        transform: translate(-50%, -50%);
+        .video-block__close {
+            display: block;
+        }
+    
+        .video {
+            min-height: 500px;
+            @include sm-block() {
+                min-height: 300px;
+            }
+            @include xs-block() {
+                min-height: 200px;
+            }
+        }
+    }
+    .video-block__close {
+        display: none;
+        cursor: pointer;
+        stroke: var(--color-white);
+        z-index: 200;
+        position: absolute;
+        right: 5px;
+        top: 10px;
+        transition: transform .3s;
+        &:hover {
+            transform: scale(1.2);
+        }
+    }       
+}
+
 .video {
     position: relative;
     overflow: hidden;

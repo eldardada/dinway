@@ -23,7 +23,10 @@
             grid-template-areas: "text" "img" "btns"
     &.hero_main .hero-content
         +xs-block
-            grid-template-areas: "text text" "btns play"
+            grid-template-areas: "text text" "btns play" "img img"
+    &.hero_main .hero-img .video-block
+        +xs-block
+            border: none
     &-text
         grid-area: text
         +bp1050-block
@@ -33,12 +36,12 @@
         position: relative
         +bp1050-block
             padding-left: 150px
-        +xs-block
-            display: none
         &__img
             display: flex
             +bp1050-block
                 margin-left: auto
+            +xs-block
+                display: none
     &-btns
         grid-area: btns
         position: relative
@@ -90,10 +93,15 @@
     height: 32%
     width: 35%
     top: 20%
-    border: 2px solid var(--color-orange)
     background-color: #fff
-    border-radius: 10px
-    overflow: hidden
+    +md-block
+        top: 18%
+        width: 43%
+        height: 60%
+    +sm-block
+        height: 70%
+        width: 47%
+
     &__media
         height: 100%
     &__play, &__desc
@@ -127,6 +135,7 @@
         min-width: 500px
         min-height: 430px
     +xs-block
+        justify-self: center
         display: block
 
 

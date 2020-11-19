@@ -52,6 +52,30 @@ export const video = () => {
     }
 
     findVideos();
+
+
+    let videos = document.querySelectorAll('[data-video]');
+
+    function videoOnClick(video) {
+        video.classList.add('active');
+    }
+
+    function closeVideo(video) {
+        video.classList.remove('active');
+    }
+
+    videos.forEach(video => {
+        video.addEventListener('click', e => {
+            if(e.target.hasAttribute('data-close')) {
+                closeVideo(video);
+            }
+            else {
+                videoOnClick(video);
+            }
+
+        });
+    });
+
 }
 
 export default video;
