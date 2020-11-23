@@ -25,7 +25,6 @@
         .video-block__close {
             display: block;
         }
-    
         .video {
             min-height: 500px;
             @include sm-block() {

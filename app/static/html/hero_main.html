@@ -27,7 +27,7 @@
                                 <svg width="68" height="48" viewBox="0 0 68 48"><path class="video__button-shape" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"></path><path class="video__button-icon" d="M 45,24 27,14 27,34"></path></svg>
                             </button>
                         </div>
-                        <svg class="video-block__close" width="20" height="20" viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg" data-close>
+                        <svg class="video-block__close" width="20" height="20" viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg" data-video_close>
                             <path d="M10.0016 1L0.589844 11" stroke="inherut"/>
                             <path d="M0.588235 1L10 11" stroke="inherit"/>
                         </svg>
@@ -38,14 +38,16 @@
                 <button class="btn-blue hero-btns__btn">Присоедениться</button>
                 <button class="btn-white hero-btns__btn hero-btns__btn--2">Продукты</button>
             </div>
-            <a class="hero-play" href="#" target="_blank">
-                <svg class="hero-play__media" width="54" height="54" viewBox="0 0 54 54" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0 27C0 41.9117 12.0883 54 27 54C41.9117 54 54 41.9117 54 27C54 12.0883 41.9117 0 27 0C12.0883 0 0 12.0883 0 27Z" fill="#DCAF54"/>
-                    <path d="M35 27.5L21.5 38.3253L21.5 16.6747L35 27.5Z" fill="white"/>
-                </svg>
+            <div class="hero-play">
+                <button data-video_btn>
+                    <svg class="hero-play__media" width="54" height="54" viewBox="0 0 54 54" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 27C0 41.9117 12.0883 54 27 54C41.9117 54 54 41.9117 54 27C54 12.0883 41.9117 0 27 0C12.0883 0 0 12.0883 0 27Z" fill="#DCAF54"/>
+                        <path d="M35 27.5L21.5 38.3253L21.5 16.6747L35 27.5Z" fill="white"/>
+                    </svg>
+                </button>
                 <p class="hero-play__desc">видео о компании</p>
                 <img class="hero-play__bg" src="static/img/hero-img-sm.svg" alt="" aria-hidden="true">
-            </a>
+            </div>
         </div>
     </div>
 </div>

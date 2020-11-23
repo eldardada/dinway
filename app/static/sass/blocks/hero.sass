@@ -24,9 +24,18 @@
     &.hero_main .hero-content
         +xs-block
             grid-template-areas: "text text" "btns play" "img img"
-    &.hero_main .hero-img .video-block
-        +xs-block
-            border: none
+    &.hero_main .hero-img 
+        +bp1050-block
+            padding-left: 150px
+        .hero-img__img
+            +bp1050-block
+                margin-left: auto
+            +xs-block
+                display: none
+        .video-block
+            +xs-block
+                z-index: 2000
+                display: none
     &-text
         grid-area: text
         +bp1050-block
@@ -34,14 +43,8 @@
     &-img
         grid-area: img
         position: relative
-        +bp1050-block
-            padding-left: 150px
         &__img
             display: flex
-            +bp1050-block
-                margin-left: auto
-            +xs-block
-                display: none
     &-btns
         grid-area: btns
         position: relative
@@ -101,7 +104,6 @@
     +sm-block
         height: 70%
         width: 47%
-
     &__media
         height: 100%
     &__play, &__desc
@@ -119,14 +121,12 @@
     grid-area: play
     display: none
     position: relative
-    &__media
-        margin-bottom: 10px
     &__desc
         color: var(--color-orange)
         font-size: 12px
         line-height: 16px
         max-width: 65px
-        margin: 0 auto
+        margin: 10px auto 0
     &__bg
         position: absolute
         z-index: -2

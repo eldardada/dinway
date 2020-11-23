@@ -1,4 +1,4 @@
-import toggleActiveCLass from '../functions.js';
+import {toggleActiveCLass} from '../functions.js';
 
 export const menu = () => {
 
