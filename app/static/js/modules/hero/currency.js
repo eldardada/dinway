@@ -2,7 +2,7 @@ import {Swiper, Autoplay} from 'swiper';
 Swiper.use([ Autoplay]);
 
 export function currency() {
-    let currencySlider = new Swiper('.hero__currency .swiper-container', {
+    let currencySlider = new Swiper('.currency-slider .swiper-container', {
         slidesPerView: 2,
         spaceBetween: 20,
         loop: true,
