@@ -1,0 +1,36 @@
+.hero.hero_main 
+    .hero-content
+        +xs-block
+            grid-template-areas: "text text" "btns play" "img img"
+    .hero-img 
+        +bp1050-block
+            padding-left: 150px
+        &__img
+            +bp1050-block
+                margin-left: auto
+        +xs-block
+            display: none
+    .video-block
+        +xs-block
+            z-index: 2000
+            display: none
+
+.hero-title_main
+    +font(130, 88)
+    line-height: 1.3
+    margin-left: -7px
+    font-family: Righteous
+    background: url("static/img/hero-title-mask.png") 0 0 / cover no-repeat
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    +xs-block
+        margin-top: 100px
+
+.hero-subtitle_main
+    font-weight: 600
+    color: var(--color-blue)
+    +font(30, 24)
+    +bp1050-block
+        text-align: center
+    +xs-block
+        margin-bottom: 140px

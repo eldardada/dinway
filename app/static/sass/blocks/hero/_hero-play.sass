@@ -1,0 +1,22 @@
+.hero-play
+    text-align: center
+    text-decoration: none
+    grid-area: play
+    display: none
+    position: relative
+    &__desc
+        color: var(--color-orange)
+        font-size: 12px
+        line-height: 16px
+        max-width: 65px
+        margin: 10px auto 0
+    &__bg
+        position: absolute
+        z-index: -2
+        top: -200px
+        left: -40px
+        min-width: 500px
+        min-height: 430px
+    +xs-block
+        justify-self: center
+        display: block
