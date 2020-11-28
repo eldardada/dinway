@@ -1,5 +1,5 @@
-import {Swiper, Navigation} from 'swiper';
-Swiper.use([Navigation]);
+import {Swiper, Navigation, Autoplay} from 'swiper';
+Swiper.use([Navigation, Autoplay]);
 
 // modules
 import bizes from './modules/bizes.js';
@@ -10,7 +10,7 @@ import team from './modules/team.js';
 import faq from './modules/faq.js';
 import news from './modules/news.js';
 import video from './modules/video.js';
-import hero_main from './modules/hero_main.js';
+import hero_main from './modules/hero/hero_main.js';
 
 window.addEventListener('load', function() {
     video();
