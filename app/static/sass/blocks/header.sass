@@ -26,7 +26,7 @@
         right: 0
         bottom: 0
         overflow: auto
-        background-color: rgb(0,0,0)
+        background-color: var(--hawkes-blue)
         transform: translateX(800px)
         transition: transform .3s
         z-index: 1000
@@ -35,12 +35,11 @@
         display: flex
         width: 100%
         text-transform: uppercase
+        @media screen and ( max-height: 300px)
+            padding: 50px 0
         +md-block
-            @media screen and ( max-height: 300px)
-                padding: 50px 0
-            color: var(--color-white)
             width: 320px
-            font-size: 30px
+            font-size: 16px
             justify-content: center
             align-items: center
             flex-direction: column
@@ -68,8 +67,8 @@
             font-weight: 700
             text-decoration: none
             color: inherit
-            font-size: 16px
             &--entry
+                font-weight: 700
                 color: var(--color-blue)
                 &::after
                     content: ''
@@ -79,13 +78,15 @@
                     width: 100%
                     background-color: var(--color-orange)
         &__nested
+            font-size: inherit
             position: absolute
             top: 100%
             left: 0
             right: 0
-            transform: scaleY(0)
-            transition: transform .3s
-            transform-origin: top
+            display: none
+            +md-block
+                text-align: center
+                position: static
             > li
                 &:not(:last-child)
                     margin-bottom: 7px
@@ -93,8 +94,7 @@
                     color: inherit
                     text-decoration: none
             &.active
-                transform: scaleY(1)
-                
+                display: block
 
         
 .header.active
@@ -147,9 +147,6 @@
     position: absolute
     -webkit-tap-highlight-color: transparent
     transition: transform 400ms
-    -moz-user-select: none
-    -webkit-user-select: none
-    -ms-user-select: none
     user-select: none
     width: 200%
     height: 200%
@@ -180,9 +177,6 @@
 .ham6 .bottom 
   stroke-dasharray: 40 172
 
-.ham6.active
-    > *
-        stroke: var(--color-white)
 .ham6.active .top 
   stroke-dashoffset: -132px
 

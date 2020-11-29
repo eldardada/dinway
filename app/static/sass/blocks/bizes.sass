@@ -34,6 +34,7 @@
         +md-block
             margin-bottom: 60px
     &-offer
+        position: relative
         text-align: center
         &__title
             margin-bottom: 40px
@@ -44,6 +45,20 @@
             font-size: 18px
             line-height: 140%
             color: var(--color-midnight)
+        &__flower
+            position: absolute
+            top: 100%
+            right: 0
+    &__decor
+        position: absolute
+        top: calc(100% - 30px)
+        left: 0
+        z-index: -1
+        +md-block
+            display: none
+
+
+
 
 .biz
     text-align: center
