@@ -1,0 +1,42 @@
+.list-image-title
+    &__container
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        grid-template-areas: "title img" "list img"
+        grid-gap: 30px
+        +bp1050-block
+            grid-template-columns: initial
+            grid-template-areas: "title" "list" "img"
+    &.reverse .list-image-title__container
+        grid-template-areas: "img title"  "img list"
+        +bp1050-block
+            grid-template-areas: "title" "list" "img"
+    &__title
+        word-break: break-word
+        grid-area: title
+        +bp1050-block
+            justify-self: center
+    &__list
+        grid-area: list
+        +bp1050-block
+            justify-self: center
+    &__image
+        grid-area: img
+        align-self: center
+        +bp1050-block
+            justify-self: center
+
+.list-image-title__list
+    display: grid
+    grid-gap: 30px
+    > li
+        display: grid
+        grid-gap: 30px
+        align-items: center
+        grid-template-columns: min-content 1fr
+        > p
+            word-break: break-word
+            line-height: 30px
+            font-size: 22px
+            max-width: 360px
+
