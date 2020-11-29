@@ -5,14 +5,14 @@
 .conference
     &__container
         display: grid
-        grid-template-columns: repeat(auto-fill, minmax(375px, 1fr))
+        grid-template-columns: 1fr 2fr
         grid-column-gap: 30px
         align-items: center
         +bp900-block
             grid-template-columns: 1fr
     &-text
         position: relative
-        +sm-block
+        +bp900-block
             max-width: 375px
             justify-self: center
             text-align: center

@@ -46,6 +46,9 @@
             flex-direction: column
             height: 100%
         &__item
+            cursor: pointer
+            white-space: nowrap
+            position: relative
             &:not(:last-child)
                 margin-right: 30px
                 +md-block
@@ -81,6 +84,18 @@
             left: 0
             right: 0
             transform: scaleY(0)
+            transition: transform .3s
+            transform-origin: top
+            > li
+                &:not(:last-child)
+                    margin-bottom: 7px
+                a
+                    color: inherit
+                    text-decoration: none
+            &.active
+                transform: scaleY(1)
+                
+
         
 .header.active
     +md-block

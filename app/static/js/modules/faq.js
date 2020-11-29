@@ -145,8 +145,6 @@ export const faq = () => {
 
             const endHeight = questionsBlock.scrollHeight;
 
-            wrapper.style.height = endHeight + 'px';
-
             let add = 0;
 
             let timer = setInterval(() => {

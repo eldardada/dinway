@@ -31,6 +31,8 @@
             text-align: left
     &__slider
         margin-bottom: 180px
+        +md-block
+            margin-bottom: 60px
     &-offer
         text-align: center
         &__title
@@ -43,13 +45,6 @@
             line-height: 140%
             color: var(--color-midnight)
 
-.bizes-blocks
-    display: grid
-    grid-gap: 40px
-    grid-template-columns: 1fr 1fr
-    &__biz-6
-        grid-column: span 2
-    
 .biz
     text-align: center
     background-color: var(--color-white)
@@ -57,21 +52,19 @@
     display: flex
     flex-direction: column
     align-items: center
-    justify-content: center
-    padding-bottom: 10px
+    padding: 10px
     &-img
         height: 240px
         display: flex
         align-items: center
-        img
-            max-height: 100%
         +xs-block
-            height: 200px
+            height: 220px
     &__title
+        height: 40px
         font-size: 24px
         font-weight: 600
         margin-top: 30px
-        margin-bottom: 13px
+        margin-bottom: 20px
         +xl-block
             font-size: 16px
         +xs-block
@@ -81,6 +74,7 @@
         font-size: 16px
         line-height: 22px
         margin-bottom: 21px
+        height: 45px
 
 
 

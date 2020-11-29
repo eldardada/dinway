@@ -12,8 +12,10 @@ export function bizes() {
             slidesPerView: 1.4,
             spaceBetween: 20,
             breakpoints: {
-                
-                730: {
+                420: {
+                    slidesPerView: 1.8,
+                },
+                900: {
                     slidesPerView: 3.2,
                 }
             }
