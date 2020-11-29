@@ -1,8 +1,8 @@
-export const video = () => {
+export function video() {
 
     function findVideos() {
         let videos = document.querySelectorAll('.video');
-
+        
         for (let i = 0; i < videos.length; i++) {
             setupVideo(videos[i]);
         }
@@ -54,5 +54,3 @@ export const video = () => {
     findVideos();
 
 }
-
-export default video;
