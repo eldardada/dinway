@@ -7,12 +7,10 @@ export const menu = () => {
     const body = document.querySelector('body');
     const overlay = document.querySelector('.overlay');
 
-    if(menu && header && body) {
+    if(menu && header) {
         menu.addEventListener('click', () => {
 
-            for(let el of [menu, header, overlay]) {
-                toggleActiveCLass(el);
-            }
+            [menu, header, overlay].forEach(el => toggleActiveCLass(el));
     
             if(header.classList.contains('active')) {
                 body.style.overflow = 'hidden';
