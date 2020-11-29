@@ -1,10 +1,18 @@
 @import burger
 
 .header
-    display: flex
-    align-items: center
+    &__top
+        position: absolute
+        left: 0
+        right: 0
+        top: 0
+        padding: 5px 0
+        background-color: var(--hawkes-blue)
+    &__bottom
+        display: flex
+        align-items: center
     &__logo
-        margin-right: 70px
+        margin-right: 80px
         +md-block
             margin-right: 20px
     &__burger
@@ -23,6 +31,7 @@
         transition: transform .3s
         z-index: 1000
     &-list
+        position: relative
         display: flex
         width: 100%
         text-transform: uppercase
@@ -36,17 +45,42 @@
             align-items: center
             flex-direction: column
             height: 100%
-        > li
+        &__item
             &:not(:last-child)
                 margin-right: 30px
                 +md-block
                     margin-right: 0
                     &:not(:last-child)
                         margin-bottom: 10px
-        &__reg
-            margin-left: auto
-            +md-block
-                margin-left: 0
+            &-name
+                display: grid
+                grid-template-columns: min-content min-content
+                align-items: center
+                grid-gap: 7px
+            &--right
+                margin-left: auto
+                +md-block
+                    margin-left: 0
+        &__link
+            font-weight: 700
+            text-decoration: none
+            color: inherit
+            font-size: 16px
+            &--entry
+                color: var(--color-blue)
+                &::after
+                    content: ''
+                    display: block
+                    margin-top: 5px
+                    height: 2px
+                    width: 100%
+                    background-color: var(--color-orange)
+        &__nested
+            position: absolute
+            top: 100%
+            left: 0
+            right: 0
+            transform: scaleY(0)
         
 .header.active
     +md-block

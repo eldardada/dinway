@@ -8,11 +8,12 @@
             margin-bottom: 40px
     &-slider
         position: relative
-        padding: 0px 44px
         +md-block
             padding: 0 20px
         +sm-block
             padding: 0
+        &__slide-desc
+
         &__next, &__prev
             cursor: pointer
             position: absolute
@@ -25,14 +26,26 @@
             +sm-block
                 display: none
         &__next
-            right: 0
+            right: -20px
         &__prev
-            left: 0
+            left: -20px
+        &__slide-desc
+            color: rgba(130, 130, 130, 0.8)
+            font-style: normal
+            font-weight: 300
+            font-size: 14px
+            line-height: 17px
+            margin: 10px 0
+        &__slide-title
+            font-style: normal
+            font-weight: normal
+            font-size: 16px
+            line-height: 120%
 
 .review
     border: 2px solid var(--color-orange)
     border-radius: 10px
-    height: 224px
+    height: 205px
     overflow: hidden
     +sm-block
         height: 169px

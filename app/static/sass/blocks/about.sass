@@ -1,9 +1,13 @@
 .about
-    overflow: hidden
+    padding-top: 100px
+    +md-block
+        padding-top: 100px
     &__container
+        position: relative
         display: grid
         grid-template-areas: "img title" "img text"
-        grid-template-columns: repeat(2, 1fr)
+        grid-template-rows: 50px 1fr
+        grid-template-columns: minmax(300px, 613px) minmax(300px, 400px)
         grid-row-gap: 30px
         grid-column-gap: 72px
         align-items: center
@@ -15,7 +19,14 @@
         +bp900-block
             text-align: center
             grid-template-columns: 1fr
+            grid-template-rows: initial
             grid-template-areas:  "title" "text" "img"
+    &__branch
+        position: absolute
+        top: -130px
+        left: -15px
+        +sm-block
+            display: none
     &__title
         grid-area: title
     &-img
@@ -28,22 +39,27 @@
             top: 50%
             left: 50%
             transform: translate(-50%, -50%)
-            +xs-block
-                transform: translate(-50%, -50%) scale(1.5)
+            +sm-block
+                display: none
+                transform: translate(-50%, calc(-50% + -100px)) scale(1.5)
     &__video
         margin: 0 auto
-        height: 236px
+        height: 257px
         width: 100%
-        max-width: 379px
-        border: 2px solid var(--color-orange)
+        max-width: 452px
         box-sizing: border-box
-        border-radius: 10px
+        border-radius: 6px
+        +xs-block
+            max-height: 200px
     &-text
         grid-area: text
+        align-self: start
         &__item
-            font-size: 16px
-            &:not(:last-child)
-                margin-bottom: 20px
+            font-style: normal
+            font-weight: normal
+            font-size: 18px
+            line-height: 140%
+            margin-bottom: 20px
         &__strong
             font-weight: 700
     &__arrow

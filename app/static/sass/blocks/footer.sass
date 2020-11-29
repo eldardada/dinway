@@ -1,10 +1,10 @@
 .footer
     position: relative
     background-color: #001032
-    padding-top: 30px
-    margin-top: 60px
+    padding-top: 60px
+    margin-top: -60px
     color: var(--color-white)
-    padding-bottom: 60px
+    padding-bottom: 30px
     &__wave
         position: absolute
         left: 0
@@ -14,26 +14,34 @@
         z-index: -1
     &__container
         display: grid
-        grid-template-columns: repeat(auto-fill, minmax(485px, 1fr))
+        grid-template-columns: 3fr 2fr
         grid-gap: 20px
         +sm-block
             grid-template-columns: 1fr
             text-align: center
     &__title
-        font-family: Montserrat
+        font-style: normal
         font-weight: 700
-        font-size: 35px
+        font-size: 36px
+        line-height: 43px
         color: var(--color-white)
         margin-bottom: 47px
     &__social
         margin-bottom: 62px
-    &__descriptor
-        margin-bottom: 17px
-        font-weight: 600
-        font-size: 24px
-    &__cta
-        font-size: 16px
-        margin-bottom: 50px
+    &__desc
+        color: var(--hawkes-blue)
+        font-size: 14px
+        font-weight: 300
+        > a 
+            font-family: Jura
+            font-style: normal
+            font-weight: 700
+            line-height: 17px
+            text-decoration-line: underline
+            color: inherit
+    &-text
+        align-self: end
+        margin-bottom: 30px
     &-img
         justify-self: center
         &__image

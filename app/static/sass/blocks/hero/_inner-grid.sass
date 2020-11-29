@@ -1,11 +1,12 @@
 .hero
     &-content
         display: grid
+        grid-template-columns: 500px 1fr
         grid-template-areas: "text img" "btns img"
         align-items: center
-        grid-gap: 10px
         +bp1050-block
             grid-row-gap: 30px
+            grid-template-columns: initial
             grid-template-areas: "text" "img" "btns"
     &-text
         grid-area: text
@@ -22,6 +23,7 @@
         grid-area: btns
         position: relative
         display: flex
+        align-self: start
         +bp1050-block
             justify-self: center
         +xs-block
