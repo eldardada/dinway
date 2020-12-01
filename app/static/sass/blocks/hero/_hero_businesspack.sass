@@ -2,9 +2,10 @@
     .hero-content
         grid-template-columns: 440px 571px
         grid-column-gap: 150px
+        +bp1050-block
+            grid-template-columns: 1fr
     .hero-img img
         margin-left: auto
-
     .hero-text
         +bp1050-block
            text-align: center
