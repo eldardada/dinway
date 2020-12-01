@@ -16,6 +16,9 @@
 
 .news-slider
     position: relative
+    padding: 0 20px
+    +sm-block
+        padding: 0
     &__prev, &__next
         cursor: pointer
         position: absolute
@@ -27,12 +30,12 @@
         +sm-block
             display: none
     &__prev
-        left: -20px
+        left: 0
     &__next
-        right: -20px
+        right: 0
 
 .news-block
-    height: 436px
+    height: 360px
     background-size: cover
     background-repeat: no-repeat
     border-radius: 26px
@@ -42,31 +45,28 @@
         height: 284px
     &__article
         position: absolute
-        left: 0
-        right: 0
         bottom: 0
 
 
 .news-article
+    height: 148px
     border-radius: 26px
-    background-color: #fff
-    top: 50%
-    bottom: 0
-    padding: 35px
+    background-color: var(--color-white)
+    padding: 20px 30px
     box-sizing: border-box
-    border: 1px solid #EBF1FE
+    border: 1px solid var(--hawkes-blue)
     +bp900-block
         border-radius: 15px
         padding: 20px  15px
     &__header
         display: flex
         justify-content: space-between
-        margin-bottom: 27px
+        margin-bottom: 20px
         +bp900-block
             margin-bottom: 17px
     &__category
         text-transform: uppercase
-        color: #DBAF5C
+        color: var(--color-orange)
         +bp900-block
             font-size: 9px
     &__time
@@ -75,18 +75,17 @@
             font-size: 8px
     &__title
         font-weight: 600
+        line-height: 28px
         font-size: 24px
-        line-height: 33px
-        margin-bottom: 14px
+        margin-bottom: 8px
         +bp900-block
             margin-bottom: 9px
             font-size: 15px
     &__text
         overflow: hidden
-        height: 44px
-        font-weight: 300
-        line-height: 22px
+        height: 40px
         font-size: 16px
+        line-height: 120%
         +bp900-block
             height: 28px
             font-size: 10px

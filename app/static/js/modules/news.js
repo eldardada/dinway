@@ -9,7 +9,7 @@ export const news = () => {
     if(news) {
         const newsSlider = new Swiper('.news-slider .swiper-container', {
             slidesPerView: 1.3,
-            spaceBetween: 20,
+            spaceBetween: 43,
             navigation: {
                 nextEl: '.news-slider__next',
                 prevEl: '.news-slider__prev',
@@ -22,7 +22,7 @@ export const news = () => {
                 576: {
                     slidesPerView: 2,
                 },
-                650: {
+                800: {
                     slidesPerView: 3,
                 },
                 1000: {
