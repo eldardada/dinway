@@ -65,7 +65,7 @@
 <pattern id="pattern1" patternContentUnits="objectBoundingBox" width="1" height="1">
 <use xlink:href="#image1" transform="translate(-0.376661) scale(0.00203166 0.00117371)"/>
 </pattern>
-<linearGradient id="paint0_linear" x1="114.568" y1="197.488" x2="114.568" y2="7.20947" gradientUnits="userSpaceOnUse">
+<linearGradient  x1="114.568" y1="197.488" x2="114.568" y2="7.20947" gradientUnits="userSpaceOnUse">
 <stop stop-color="#808080" stop-opacity="0.25"/>
 <stop offset="0.54" stop-color="#808080" stop-opacity="0.12"/>
 <stop offset="1" stop-color="#808080" stop-opacity="0.1"/>

@@ -1,9 +1,9 @@
 .about
+    position: relative
     padding-top: 130px
     +md-block
         padding-top: 100px
     &__container
-        position: relative
         display: grid
         grid-template-areas: "img title" "img text"
         grid-template-rows: 50px 1fr
@@ -23,9 +23,9 @@
             grid-template-areas:  "title" "text" "img"
     &__branch
         position: absolute
-        top: -130px
-        left: -65px
-        +sm-block
+        top: 0
+        left: 0
+        +md-block
             display: none
     &__title
         grid-area: title
@@ -66,7 +66,8 @@
             font-size: 18px
             line-height: 140%
             margin-bottom: 20px
-            max-width: 500px
+            max-width: 492px
+
             +bp900-block
                 margin: 0 auto 20px
         &__strong

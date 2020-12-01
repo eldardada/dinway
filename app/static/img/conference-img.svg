@@ -162,7 +162,7 @@
 <path d="M80.8681 330.895C80.5793 331.1 80.0234 330.95 80.0006 330.895C79.9778 330.841 80.5831 330.309 80.8681 330.105C81.1531 329.9 80.8453 330.05 80.8681 330.105C80.8909 330.159 81.1531 330.691 80.8681 330.895Z" fill="#DCAF54"/>
 </g>
 <defs>
-<linearGradient id="paint0_linear" x1="170.998" y1="369.053" x2="170.998" y2="89.991" gradientUnits="userSpaceOnUse">
+<linearGradient  x1="170.998" y1="369.053" x2="170.998" y2="89.991" gradientUnits="userSpaceOnUse">
 <stop stop-color="#808080" stop-opacity="0.25"/>
 <stop offset="0.54" stop-color="#808080" stop-opacity="0.12"/>
 <stop offset="1" stop-color="#808080" stop-opacity="0.1"/>

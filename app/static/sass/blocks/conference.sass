@@ -5,8 +5,8 @@
 .conference
     &__container
         display: grid
-        grid-template-columns: 1fr 1.56fr
-        grid-column-gap: 30px
+        grid-template-columns: 513px 1fr
+        grid-column-gap: 50px
         align-items: center
         +bp900-block
             grid-template-columns: 1fr
@@ -17,8 +17,9 @@
             justify-self: center
             text-align: center
         &__item
-            font-size: 16px
-            line-height: 22px
+            max-width: 513px
+            font-size: 18px
+            line-height: 140%
             &:not(:last-child)
                 margin-bottom: 20px
     &-img
@@ -29,9 +30,9 @@
             height: 200px
         &__video
             position: absolute
-            left: 52.3%
+            left: 50%
             top: 18%
-            width: 51%
+            width: 56%
             height: 40%
             display: flex
             justify-content: center
