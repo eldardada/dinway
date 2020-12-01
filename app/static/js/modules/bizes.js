@@ -135,34 +135,6 @@ export function bizes() {
                     allowTouchMove: true,
                     direction: 'horizontal',
                 },
-                1776: {
-                    slidesPerView: 5.3,
-                    allowTouchMove: true,
-                    direction: 'horizontal',
-                },
-                1826: {
-                    slidesPerView: 5.45,
-                    allowTouchMove: true,
-                    direction: 'horizontal',
-                },
-                1876: {
-                    slidesPerView: 5.6,
-                    allowTouchMove: true,
-                    direction: 'horizontal',
-                },
-                1920: {
-                    slidesPerView: 5.72,
-                    allowTouchMove: true,
-                    direction: 'horizontal',
-                },
-                
-                
-                
-                
-                
-                
-                
-
             }
         };
 
