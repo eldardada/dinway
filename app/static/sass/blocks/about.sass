@@ -7,7 +7,7 @@
         display: grid
         grid-template-areas: "img title" "img text"
         grid-template-rows: 50px 1fr
-        grid-template-columns: 1.4fr 1fr
+        grid-template-columns: 1fr 1fr
         grid-row-gap: 30px
         grid-column-gap: 39px
         align-items: center
@@ -23,32 +23,35 @@
             grid-template-areas:  "title" "text" "img"
     &__branch
         position: absolute
-        top: -160px
-        left: -15px
+        top: -130px
+        left: -65px
         +sm-block
             display: none
     &__title
         grid-area: title
     &-img
-        grid-area: img
         position: relative
+        grid-area: img
         padding: 30px 0
+        display: flex
         &__img
             position: absolute
             z-index: -1
             top: 50%
-            left: 50%
+            left: 260px
             transform: translate(-50%, -50%)
             +sm-block
                 display: none
                 transform: translate(-50%, calc(-50% + -100px)) scale(1.5)
     &__video
-        margin: 0 auto
         height: 257px
         width: 100%
         max-width: 452px
         box-sizing: border-box
         border-radius: 6px
+        margin-left: 20px
+        +bp900-block
+            margin-left: 0
         +xs-block
             max-height: 200px
     &-text
