@@ -16,13 +16,11 @@
             padding: 0 20px
         +sm-block
             padding: 0
-        &__slide-desc
-
         &__next, &__prev
             cursor: pointer
             position: absolute
             top: 50%
-            transform: translateY(-50%)
+            transform: translateY(calc(-50% - 25px))
             &:focus
                 outline: none
             &.swiper-button-disabled
@@ -47,7 +45,6 @@
             line-height: 120%
 
 .review
-    border: 2px solid var(--color-orange)
     border-radius: 10px
     height: 205px
     overflow: hidden
