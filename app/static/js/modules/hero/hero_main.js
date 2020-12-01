@@ -12,12 +12,16 @@ export function hero_main() {
 
             const btn = target.closest('#hero-video-btn');
             const close = target.closest('.hero-video__close');
+            const body = target.closest('body');
             
             if(btn) {
                 heroContent.insertAdjacentHTML('beforeend', heroVideo);
+                body.style.overflow = 'hidden';
             }
             else if(close) {
                 document.querySelector('.hero-video').remove();
+                body.style.overflow = 'visible';
+
             }
         })
         
