@@ -9,13 +9,13 @@ export function bizes() {
         const container = bizes.querySelector('.bizes-slider .swiper-container');
     
         const settings = {
-            slidesPerView: 1.4,
+            slidesPerView: 'auto',
             spaceBetween: 20,
+            direction: 'vertical',
             breakpoints: {
-                420: {
-                    slidesPerView: 1.8,
-                },
                 900: {
+                    direction: 'horizontal',
+                    spaceBetween: 20,
                     slidesPerView: 3.2,
                 }
             }

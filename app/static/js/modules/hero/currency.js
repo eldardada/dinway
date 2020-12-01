@@ -12,25 +12,25 @@ export function currency() {
             delay: 3000,
         },
         breakpoints: {
-            480: {
+            520: {
                 slidesPerView: 3,
             },
-            640: {
+            705: {
                 slidesPerView: 4,
             },
-            800: {
+            890: {
                 slidesPerView: 5,
             },
-            960: {
+            1045: {
                 slidesPerView: 6,
             },
-            1120: {
+            1220: {
                 slidesPerView: 7,
             },
-            1280: {
+            1395: {
                 slidesPerView: 8,
             },
-            1440: {
+            1570: {
                 slidesPerView: 9,
             },
         }
