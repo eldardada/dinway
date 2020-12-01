@@ -1,9 +1,12 @@
+@import './_list-image-title_promotion'
+    
 .list-image-title
     &__container
+        position: relative
         display: grid
-        grid-template-columns: repeat(2, 1fr)
+        grid-row-gap: 64px
         grid-template-areas: "title img" "list img"
-        grid-gap: 30px
+        align-items: center
         +bp1050-block
             grid-template-columns: initial
             grid-template-areas: "title" "list" "img"
@@ -14,7 +17,11 @@
     &__title
         word-break: break-word
         grid-area: title
+        width: 556px
+        max-width: 556px
         +bp1050-block
+            position: static
+            width: initial
             justify-self: center
     &__list
         grid-area: list
@@ -28,15 +35,27 @@
 
 .list-image-title__list
     display: grid
-    grid-gap: 30px
+    grid-gap: 40px
     > li
         display: grid
-        grid-gap: 30px
+        grid-gap: 14px
         align-items: center
         grid-template-columns: min-content 1fr
         > p
             word-break: break-word
-            line-height: 30px
-            font-size: 22px
-            max-width: 360px
+            font-weight: bold
+            font-size: 18px
+            line-height: 140%
+        &:first-child > p
+            max-width: 185px
+        &:nth-child(2) > p
+            max-width: 315px
+        &:nth-child(3) > p
+            max-width: 289px
+        &:nth-child(4) > p
+            max-width: 205px
+            
+            
+        
+                
 
