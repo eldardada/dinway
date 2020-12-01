@@ -11,8 +11,13 @@
     align-items: center
     &__body
         position: relative
-        width: 720px
+        width: 80%
+        max-width: 720px
         height: 405px
+        +sm-block
+            height: 250px
+        +xs-block
+            height: 200px
     &__embed
         position: absolute
         top: 0

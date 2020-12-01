@@ -10,14 +10,15 @@ export function bizes() {
     
         const settings = {
             slidesPerView: 'auto',
-            spaceBetween: 20,
             direction: 'vertical',
+            spaceBetween: 20,
+            allowTouchMove: false,
+            loop: true,
             breakpoints: {
-                900: {
+                576: {
+                    allowTouchMove: true,
                     direction: 'horizontal',
-                    spaceBetween: 20,
-                    slidesPerView: 3.2,
-                }
+                },
             }
         };
 
