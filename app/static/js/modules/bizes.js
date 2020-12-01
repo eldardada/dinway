@@ -16,6 +16,7 @@ export function bizes() {
             loop: true,
             breakpoints: {
                 576: {
+                    slidesPerView: 5,
                     allowTouchMove: true,
                     direction: 'horizontal',
                 },
@@ -23,6 +24,7 @@ export function bizes() {
         };
 
         let slider = new Swiper(container, settings);
+        
     }
 };
 
