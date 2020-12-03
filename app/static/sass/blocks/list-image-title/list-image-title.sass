@@ -1,24 +1,26 @@
 @import './_list-image-title_promotion'
-    
+@import './_list-image-title_advantages'
+
 .list-image-title
     &__container
         position: relative
         display: grid
-        grid-row-gap: 64px
+        grid-row-gap: 40px
+        grid-column-gap: 35px
         grid-template-areas: "title img" "list img"
-        align-items: center
+        width: 100%
+        max-width: 1160px
+        margin: 0 auto
         +bp1050-block
-            grid-template-columns: initial !important
             grid-template-areas: "title" "list" "img"
     &.reverse .list-image-title__container
+        grid-template-columns: 1.5fr 1fr
         grid-template-areas: "img title"  "img list"
         +bp1050-block
             grid-template-areas: "title" "list" "img"
     &__title
         word-break: break-word
         grid-area: title
-        width: 556px
-        max-width: 556px
         +bp1050-block
             position: static
             width: initial
@@ -33,29 +35,16 @@
         +bp1050-block
             justify-self: center
 
-.list-image-title__list
+.list-image-title-ul
     display: grid
     grid-gap: 40px
-    > li
+    &__item
         display: grid
         grid-gap: 14px
         align-items: center
         grid-template-columns: min-content 1fr
-        > p
-            word-break: break-word
-            font-weight: bold
-            font-size: 18px
-            line-height: 140%
-        &:first-child > p
-            max-width: 185px
-        &:nth-child(2) > p
-            max-width: 315px
-        &:nth-child(3) > p
-            max-width: 289px
-        &:nth-child(4) > p
-            max-width: 205px
-            
-            
-        
-                
-
+    &__text
+        word-break: break-word
+        font-weight: bold
+        font-size: 18px
+        line-height: 140%

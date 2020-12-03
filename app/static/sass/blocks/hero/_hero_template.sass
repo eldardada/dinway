@@ -1,16 +1,17 @@
-.hero.hero_businesspack
+.hero.hero_template
     .hero-content
-        grid-template-columns: 440px 571px
-        grid-column-gap: 150px
+        width: 100%
+        max-width: 1160px
+        margin: 0 auto
         +bp1050-block
             grid-template-columns: 1fr
     .hero-img img
         margin-left: auto
     .hero-text
         +bp1050-block
-           text-align: center
-    
-.hero-title_businesspack
+            text-align: center
+
+.hero-title_template
     font-family: 'Montserrat'
     font-weight: bold
     font-size: 72px
@@ -21,7 +22,7 @@
     color: var(--color-blue)
     margin-bottom: 20px
 
-.hero-subtitle_businesspack
+.hero-subtitle_template
     max-width: 361px
     line-height: 22px
     font-size: 18px
