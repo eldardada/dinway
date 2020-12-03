@@ -1,16 +1,16 @@
 import {Swiper, Navigation} from 'swiper';
 Swiper.use([Navigation]);
 
-export const feedback = () => {
-    const feedback = document.querySelector('.feedback');
+export const simpleSlider = () => {
+    const simpleSlider = document.querySelector('.simple-slider');
 
-    if(feedback) {
-        const feedbackSlider = new Swiper('.feedback-slider .swiper-container', {
+    if(simpleSlider) {
+        const slider = new Swiper('.simple-slider .swiper-container', {
             slidesPerView: 1.3,
             spaceBetween: 20,
             navigation: {
-                nextEl: '.feedback-slider__next',
-                prevEl: '.feedback-slider__prev',
+                nextEl: '.simple-slider-slider__next',
+                prevEl: '.simple-slider-slider__prev',
             },
             breakpoints: {
                 968: {
@@ -23,7 +23,3 @@ export const feedback = () => {
         });
     }
 }
-
-
-
-export default feedback;
