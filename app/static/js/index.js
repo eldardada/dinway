@@ -27,4 +27,5 @@ window.addEventListener('load', function() {
     hero_main();
     video();
     MicroModal.init();
+    modal();
 });
