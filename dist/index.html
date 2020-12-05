@@ -6,12 +6,12 @@
     <link rel="stylesheet" href="style.css">
     <title>Dinway</title>
 </head>
-<body>
+<body class="page">
 
     <main class="main">
         <div class="hero hero_main">
     <div class="container hero__container">
-        <header class="header">
+        <header class="header page__header">
     <div class="header__top">
         <div class="currency">
             <div class="currency-slider">
@@ -175,117 +175,114 @@
         <img class="about__branch" src="static/img/about/branch.svg" alt aria-hidden="true" >
     </div>
 </section>
-        <section id="why" class="section why">
+        <section id="why" class="why page__why">
     <div class="container why__container">
         <h2 class="title why__title">Почему мы?</h2>
-        <div class="why-slider">
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="advantage">
-                            <div class="advantage__img advantage__img--1"><img src="static/img/why/why-1.svg" alt="Удобство"></div>
-                            <h3 class="advantage__title">Удобство</h3>
-                            <p class="advantage__subtitle">Даём все инструменты</p>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="advantage">
-                            <div class="advantage__img advantage__img--2"><img src="static/img/why/why-2.svg" alt="Открытость"></div>
-                            <h3 class="advantage__title">Открытость</h3>
-                            <p class="advantage__subtitle">Всегда идем на контакт</p>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="advantage">
-                            <div class="advantage__img advantage__img--3"><img src="static/img/why/why-3.svg" alt="Социальность"></div>
-                            <h3 class="advantage__title">Социальность</h3>
-                            <p class="advantage__subtitle">Строим новое общество</p>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="advantage">
-                            <div class="advantage__img advantage__img--4"><img src="static/img/why/why-4.svg" alt="Стабильность"></div>
-                            <h3 class="advantage__title">Стабильность</h3>
-                            <p class="advantage__subtitle">Уверены в завтрашнем дне</p>
-                        </div>
-                    </div>
-                </div>
+        <div class="why-blocks">
+            <div class="advantage">
+                <div class="advantage__img advantage__img--1"><img src="static/img/why/why-1.svg" alt="Удобство"></div>
+                <h3 class="advantage__title">Удобство</h3>
+                <p class="advantage__subtitle">Даём все инструменты</p>
+            </div>
+            <div class="advantage">
+                <div class="advantage__img advantage__img--2"><img src="static/img/why/why-2.svg" alt="Открытость"></div>
+                <h3 class="advantage__title">Открытость</h3>
+                <p class="advantage__subtitle">Всегда идем на контакт</p>
+            </div>
+            <div class="advantage">
+                <div class="advantage__img advantage__img--3"><img src="static/img/why/why-3.svg" alt="Социальность"></div>
+                <h3 class="advantage__title">Социальность</h3>
+                <p class="advantage__subtitle">Строим новое общество</p>
+            </div>
+            <div class="advantage">
+                <div class="advantage__img advantage__img--4"><img src="static/img/why/why-4.svg" alt="Стабильность"></div>
+                <h3 class="advantage__title">Стабильность</h3>
+                <p class="advantage__subtitle">Уверены в завтрашнем дне</p>
             </div>
         </div>
     </div>
 </section>
-        <section class="section bizes">
+        <section class="section bizes page__bizes">
     <svg class="bizes__wave1" viewBox="0 0 1366 144" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M705 2.00006C249.4 -9.99994 46.5 91.0001 2 143H1364C1216 19.4001 863 -2.49992 705 2.00006Z" stroke="inherit"/>
     </svg>
-    <div class="bizes__outer-wrapper">
-        <div class="container bizes__container">
-            <h2 class="title bizes__title">Наши продукты</h2>
-            <div class="bizes__slider bizes-slider">
-                <div class="swiper-container">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="bizes__block biz biz-1">
-                                <div class="biz-img"><img src="static/img/bizes/bizes-1.svg" alt=""></div>
-                                <h3 class="biz__title">Инвестиции</h3>
-                                <p class="biz__subtitle">Получайте пассивный доход</p>
-                                <a class="biz__link" href="#">
-                                    Подробнее<span>></span>
-                                </a>
-                            </div>
+    <div class="container bizes__container">
+        <h2 class="title bizes__title">Наши продукты</h2>
+        <div class="bizes__slider bizes-slider">
+            <button class="bizes-slider__slider-prev">
+                <svg class="slider-btn_simple">
+                    <use xlink:href="static/img/svg/sprite.svg#slider-prev-btn"></use>
+                </svg>
+            </button>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="bizes__block biz biz-1">
+                            <div class="biz-img"><img src="static/img/bizes/bizes-1.svg" alt=""></div>
+                            <h3 class="biz__title">Инвестиции</h3>
+                            <p class="biz__subtitle">Получайте пассивный доход</p>
+                            <a class="biz__link" href="#">
+                                Подробнее<span>></span>
+                            </a>
                         </div>
-                        <div class="swiper-slide">
-                            <div class="bizes__block biz biz-2">
-                                <div class="biz-img"><img src="static/img/bizes/bizes-2.svg" alt=""></div>
-                                <h3 class="biz__title">Партнерская программа</h3>
-                                <p class="biz__subtitle">Собирайте команду и зарабатывайте</p>
-                                <a class="biz__link" href="#">
-                                    Подробнее<span>></span>
-                                </a>
-                            </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="bizes__block biz biz-2">
+                            <div class="biz-img"><img src="static/img/bizes/bizes-2.svg" alt=""></div>
+                            <h3 class="biz__title">Партнерская программа</h3>
+                            <p class="biz__subtitle">Собирайте команду и зарабатывайте</p>
+                            <a class="biz__link" href="#">
+                                Подробнее<span>></span>
+                            </a>
                         </div>
-                        <div class="swiper-slide">
-                            <div class="bizes__block biz biz-3">
-                                <div class="biz-img"><img src="static/img/bizes/bizes-3.svg" alt=""></div>
-                                <h3 class="biz__title">Бизнес-гейминг</h3>
-                                <p class="biz__subtitle">Используйте знания и отдыхайте</p>
-                                <a class="biz__link" href="#">
-                                    Подробнее<span>></span>
-                                </a>
-                            </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="bizes__block biz biz-3">
+                            <div class="biz-img"><img src="static/img/bizes/bizes-3.svg" alt=""></div>
+                            <h3 class="biz__title">Бизнес-гейминг</h3>
+                            <p class="biz__subtitle">Используйте знания и отдыхайте</p>
+                            <a class="biz__link" href="#">
+                                Подробнее<span>></span>
+                            </a>
                         </div>
-                        <div class="swiper-slide" data-toggle-slide>
-                            <div class="biz">
-                                <div class="biz-img"><img src="static/img/bizes/bizes-4.svg" alt=""></div>
-                                <h3 class="biz__title">BlogTime</h3>
-                                <p class="biz__subtitle">Станьте блогером и зарабатывайте</p>
-                                <a class="biz__link" href="#">
-                                    Подробнее<span>></span>
-                                </a>
-                            </div>
+                    </div>
+                    <div class="swiper-slide" data-toggle-slide>
+                        <div class="biz">
+                            <div class="biz-img"><img src="static/img/bizes/bizes-4.svg" alt=""></div>
+                            <h3 class="biz__title">BlogTime</h3>
+                            <p class="biz__subtitle">Станьте блогером и зарабатывайте</p>
+                            <a class="biz__link" href="#">
+                                Подробнее<span>></span>
+                            </a>
                         </div>
-                        <div class="swiper-slide" data-toggle-slide>
-                            <div class="bizes-blocks__biz-5 biz">
-                                <div class="biz-img"><img src="static/img/bizes/bizes-5.svg" alt=""></div>
-                                <h3 class="biz__title">BusinessPack</h3>
-                                <p class="biz__subtitle">Упакуйте собственный бизнес</p>
-                                <a class="biz__link" href="#">
-                                    Подробнее<span>></span>
-                                </a>
-                            </div>
+                    </div>
+                    <div class="swiper-slide" data-toggle-slide>
+                        <div class="bizes-blocks__biz-5 biz">
+                            <div class="biz-img"><img src="static/img/bizes/bizes-5.svg" alt=""></div>
+                            <h3 class="biz__title">BusinessPack</h3>
+                            <p class="biz__subtitle">Упакуйте собственный бизнес</p>
+                            <a class="biz__link" href="#">
+                                Подробнее<span>></span>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="bizes-offer">
-                <h3 class="title bizes-offer__title">Бесплатная консультация</h3>
-                <p class="bizes-offer__subtitle">Компания предлагает множество возможностей для улучшения вашей жизни. Наверняка вы найдете продукт себе по душе, а если остались вопросы — оставьте заявку на личную консультацию!</p>
-                <button class="btn-white biz__btn">Записаться</button>
-                <img class="bizes-offer__flower" src="static/img/bizes/flower.svg" alt aria-hidden="true">
-            </div>
+            <button class="bizes-slider__slider-next">
+                <svg class="slider-btn_simple">
+                    <use xlink:href="static/img/svg/sprite.svg#slider-next-btn"></use>
+                </svg>
+            </button>
         </div>
-        <img class="bizes__decor" src="static/img/decor-branch-1.svg" alt aria-hidden="true">
+        <div class="bizes-offer">
+            <h3 class="title bizes-offer__title">Бесплатная консультация</h3>
+            <p class="bizes-offer__subtitle">Компания предлагает множество возможностей для улучшения вашей жизни. Наверняка вы найдете продукт себе по душе, а если остались вопросы — оставьте заявку на личную консультацию!</p>
+            <button class="btn-white biz__btn">Записаться</button>
+            <img class="bizes-offer__flower" src="static/img/bizes/flower.svg" alt aria-hidden="true">
+        </div>
+        
     </div>
+    <img class="bizes__decor" src="static/img/decor-branch-1.svg" alt aria-hidden="true">
     <svg class="bizes__wave2" viewBox="0 0 1360 100" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M1359.5 25.5C1332 75 932 96.5 860.5 96.5C789 96.5 750 107 398 88C116.4 72.8 16 23.3333 1 0.5H1359.5" stroke="inherit"/>
     </svg>
@@ -300,9 +297,11 @@
             </span>            
         </div>
         <div class="simple-slider-slider">
-            <svg class="simple-slider-slider__prev" width="9" height="13" viewBox="0 0 9 13" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1.39247 5.0931C0.62112 5.87244 0.62112 7.12756 1.39247 7.90691L5.57851 12.1363C6.83543 13.4063 9 12.5162 9 10.7294L9 2.27058C9 0.483798 6.83543 -0.406268 5.57851 0.863675L1.39247 5.0931Z" fill="inherit"/>
-            </svg>    
+            <button class="simple-slider-slider__prev">
+                <svg class="slider-btn_simple">
+                    <use xlink:href="static/img/svg/sprite.svg#slider-prev-btn"></use>
+                </svg>
+            </button>
             <div class="swiper-container">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
@@ -411,41 +410,43 @@
                     
                 </div>
             </div>
-            <svg class="simple-slider-slider__next" width="9" height="13" viewBox="0 0 9 13" xmlns="http://www.w3.org/2000/svg">
-                <path d="M7.60753 5.0931C8.37888 5.87244 8.37888 7.12756 7.60753 7.90691L3.42149 12.1363C2.16457 13.4063 2.29692e-06 12.5162 2.04843e-06 10.7294L8.72056e-07 2.27058C6.23566e-07 0.483798 2.16457 -0.406268 3.42149 0.863675L7.60753 5.0931Z"/>
-            </svg>
+            <button class="simple-slider-slider__next">
+                <svg class="slider-btn_simple">
+                    <use xlink:href="static/img/svg/sprite.svg#slider-next-btn"></use>
+                </svg>
+            </button>
         </div>
     </div>
 </section>
         <section class="section plans">
     <div class="container plans__container">
-        <h2 class="title plans__title">Планы компании до 2022 года</h2>
+        <h2 class="title plans__title">Планы компании</h2>
         <div class="plans-info">
             <div class="plans-info__col plans-info__col--1 plans-col">
                 <div class="plans-col__item">
-                    <div>
+                    <div class="plans-col__item-left">
                         <strong class="plans-info__title">$10 млн</strong>
                         <p class="plans-info__subtitle">Капитализация</p>
                     </div>
-                    <div>
+                    <div class="plans-col__item-right">
                         <span class="plans-col__num">01</span>
                     </div>
                 </div>
                 <div class="plans-col__item">
-                    <div>
+                    <div class="plans-col__item-left">
                         <strong class="plans-info__title">1 млн</strong>
                         <p class="plans-info__subtitle">пользователей</p>
                     </div>
-                    <div>
+                    <div class="plans-col__item-right">
                         <span class="plans-col__num">02</span>
                     </div>
                 </div>
                 <div class="plans-col__item">
-                    <div>
+                    <div class="plans-col__item-left">
                         <strong class="plans-info__title">10 тыс</strong>
                         <p class="plans-info__subtitle">миллионеров</p>
                     </div>
-                    <div>
+                    <div class="plans-col__item-right">
                         <span class="plans-col__num">03</span>
                     </div>
                 </div>
@@ -453,40 +454,39 @@
             </div>
             <div class="plans-info__col plans-info__col--2 plans-col">
                 <div class="plans-img">
-                    <img src="static/img/plans-img.svg" alt="">
+                    <img class="plans-img__main" src="static/img/plans-img.svg" alt="Цели компании">
+                    <img class="plans-img__bg" src="static/img/plans-img-bg.svg"  alt="">
                 </div>
             </div>
             <div class="plans-info__col plans-info__col--3 plans-col">
                 <div class="plans-col__item">
-                    <div>
+                    <div class="plans-col__item-left">
                         <span class="plans-col__num">04</span>
                     </div>
-                    <div>
+                    <div class="plans-col__item-right">
                         <strong class="plans-info__title">10</strong>
                         <p class="plans-info__subtitle">запущенных продуктов</p>
                     </div>
                 </div>
                 <div class="plans-col__item">
-                    <div>
+                    <div class="plans-col__item-left">
                         <span class="plans-col__num">05</span>
                     </div>
-                    <div>
+                    <div class="plans-col__item-right">
                         <strong class="plans-info__title">1 тыс</strong>
                         <p class="plans-info__subtitle">успешных Блогеров</p>
                     </div>
                 </div>
                 <div class="plans-col__item">
-                    <div>
+                    <div class="plans-col__item-left">
                         <span class="plans-col__num">06</span>
                     </div>
-                    <div>
+                    <div class="plans-col__item-right">
                         <strong class="plans-info__title">500</strong>
                         <p class="plans-info__subtitle">упакованных бизнесов</p>
                     </div>
                 </div>
-                
             </div>
-            
         </div>
     </div>
 </section>

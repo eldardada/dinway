@@ -5,7 +5,7 @@ Swiper.use([Navigation, Autoplay]);
 import {bizes} from './modules/bizes.js';
 import menu from './modules/menu.js';
 import {simpleSlider} from './modules/simple-slider.js';
-import why from './modules/why.js';
+// import why from './modules/why.js';
 import team from './modules/team.js';
 import faq from './modules/faq.js';
 import news from './modules/news.js';
@@ -17,7 +17,7 @@ window.addEventListener('load', function() {
     menu();
     nav();
     bizes();
-    why();
+    // why();
     simpleSlider();
     team();
     faq();
