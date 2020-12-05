@@ -119,6 +119,27 @@ body
         visibility: visible
         opacity: 1
 
+.btn-transparent
+    font-weight: 700
+    font-family: inherit
+    cursor: pointer
+    font-size: 12px
+    line-height: 14px
+    color: var(--color-blue)
+    border-radius: 30px
+    border: 1px solid currentColor
+    padding: 8px 20px
+    text-decoration: none
+    display: flex
+    align-items: center
+    z-index: 2
+    transition: border 0.3s, color 0.3s, background-color 0.3s
+    &:hover
+        color: var(--color-white)
+        border: 1px solid var(--color-blue)
+        background-color: var(--color-blue)
+
+
 .bg-transpatent
     background-color: transparent !important
 

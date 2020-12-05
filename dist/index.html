@@ -221,7 +221,7 @@
                             <div class="biz-img"><img src="static/img/bizes/bizes-1.svg" alt=""></div>
                             <h3 class="biz__title">Инвестиции</h3>
                             <p class="biz__subtitle">Получайте пассивный доход</p>
-                            <a class="biz__link" href="#">
+                            <a class="biz__link btn-transparent" href="#">
                                 Подробнее<span>></span>
                             </a>
                         </div>
@@ -231,7 +231,7 @@
                             <div class="biz-img"><img src="static/img/bizes/bizes-2.svg" alt=""></div>
                             <h3 class="biz__title">Партнерская программа</h3>
                             <p class="biz__subtitle">Собирайте команду и зарабатывайте</p>
-                            <a class="biz__link" href="#">
+                            <a class="biz__link btn-transparent" href="#">
                                 Подробнее<span>></span>
                             </a>
                         </div>
@@ -241,7 +241,7 @@
                             <div class="biz-img"><img src="static/img/bizes/bizes-3.svg" alt=""></div>
                             <h3 class="biz__title">Бизнес-гейминг</h3>
                             <p class="biz__subtitle">Используйте знания и отдыхайте</p>
-                            <a class="biz__link" href="#">
+                            <a class="biz__link btn-transparent" href="#">
                                 Подробнее<span>></span>
                             </a>
                         </div>
@@ -251,7 +251,7 @@
                             <div class="biz-img"><img src="static/img/bizes/bizes-4.svg" alt=""></div>
                             <h3 class="biz__title">BlogTime</h3>
                             <p class="biz__subtitle">Станьте блогером и зарабатывайте</p>
-                            <a class="biz__link" href="#">
+                            <a class="biz__link btn-transparent" href="#">
                                 Подробнее<span>></span>
                             </a>
                         </div>
@@ -261,7 +261,7 @@
                             <div class="biz-img"><img src="static/img/bizes/bizes-5.svg" alt=""></div>
                             <h3 class="biz__title">BusinessPack</h3>
                             <p class="biz__subtitle">Упакуйте собственный бизнес</p>
-                            <a class="biz__link" href="#">
+                            <a class="biz__link btn-transparent" href="#">
                                 Подробнее<span>></span>
                             </a>
                         </div>
@@ -280,7 +280,6 @@
             <button class="btn-white biz__btn" data-micromodal-trigger="modal-feedback">Записаться</button>
             <img class="bizes-offer__flower" src="static/img/bizes/flower.svg" alt aria-hidden="true">
         </div>
-        
     </div>
     <img class="bizes__decor" src="static/img/decor-branch-1.svg" alt aria-hidden="true">
     <svg class="bizes__wave2" viewBox="0 0 1360 100" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -612,8 +611,8 @@
         </div>
         
         <div class="faq-btns">
-            <button class="faq__btn" data-more>Показать ещё</button>
-            <button class="faq__btn" data-close>Скрыть</button>
+            <button class="faq__btn btn-transparent" data-more>Показать ещё</button>
+            <button class="faq__btn btn-transparent" data-close>Скрыть</button>
         </div>
     </div>
 </section>
@@ -762,38 +761,36 @@
                     Свяжитесь с нами!
                 </h3>
             </div>
-            <form class="modal-form" action="">
+            <form class="modal-form">
                 <div class="modal__content" id="modal-content">
                     <label class="modal__label">
-                        <h4 class="modal__label-title">
+                        <span class="modal__label-title">
                             Имя
-                        </h4>
+                        </span>
                         <input class="modal__input" type="text" placeholder="Дин">
                     </label>
                     <label class="modal__label">
-                        <h4 class="modal__label-title">
+                        <span class="modal__label-title">
                             Контакт для связи
-                        </h4>
+                        </span>
                         <input class="modal__input" type="text" placeholder="@ritofos_support">
                     </label>
-                    <label>
-                        <h4 class="modal__label-title">
-                            Выберите лучший мессенджер для связи
-                        </h4>
-                        <div class="modal-select" data-state>
-                            <div class="modal-select__title" data-default="Telegram">Telegram</div>
-                            <div class="modal-select__content">
-                              <input id="feedback-modal__option-0" class="modal-select__input" type="radio" checked />
-                              <label for="feedback-modal__option-0" class="modal-select__label">Telegram</label>
-                              <input id="feedback-modal__option-1" class="modal-select__input" type="radio"/>
-                              <label for="feedback-modal__option-1" class="modal-select__label">Telegram</label>
-                              <input id="feedback-modal__option-2" class="modal-select__input" type="radio" />
-                              <label for="feedback-modal__option-2" class="modal-select__label">Viber</label>
-                              <input id="feedback-modal__option-3" class="modal-select__input" type="radio"/>
-                              <label for="feedback-modal__option-3" class="modal-select__label">Whatsapp</label>
-                            </div>
-                          </div>
-                    </label>
+                    <span class="modal__label-title">
+                        Выберите лучший мессенджер для связи
+                    </span>
+                    <div class="modal-select" data-state>
+                        <div class="modal-select__title" data-default="Telegram">Telegram</div>
+                        <div class="modal-select__content">
+                            <input id="feedback-modal__option-0" class="modal-select__input" type="radio" checked />
+                            <label for="feedback-modal__option-0" class="modal-select__label">Telegram</label>
+                            <input id="feedback-modal__option-1" class="modal-select__input" type="radio"/>
+                            <label for="feedback-modal__option-1" class="modal-select__label">Telegram</label>
+                            <input id="feedback-modal__option-2" class="modal-select__input" type="radio" />
+                            <label for="feedback-modal__option-2" class="modal-select__label">Viber</label>
+                            <input id="feedback-modal__option-3" class="modal-select__input" type="radio"/>
+                            <label for="feedback-modal__option-3" class="modal-select__label">Whatsapp</label>
+                        </div>
+                        </div>
                 </div>
                 <div class="modal__footer">
                     <button type="submit" class="modal__btn btn-blue">Отправить</button>
