@@ -1,39 +1,48 @@
 <!-- Форма обратной связи -->
-<div class="modal micromodal-slide modal-feedback" id="modal-feedback" aria-hidden="true">
+<div class="modal micromodal-slide" id="modal-feedback" aria-hidden="true">
     <div class="modal__overlay" tabindex="-1" data-micromodal-close>
-        <div class="modal__container modal-feedback__container" role="dialog" aria-modal="true" aria-labelledby="modal-feedback-title">
-            <button class="modal-feedback__close" aria-label="Закрыть модальное окно" data-micromodal-close>X</button>
-            <div class="modal__header modal-feedback__header">
-                <h3 class="modal-feedback__title" id="modal-feedback-title">
+        <div class="modal__container modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+            <button class="modal__close" aria-label="Закрыть модальное окно" data-micromodal-close>X</button>
+            <div class="modal__header modal__header">
+                <h3 class="modal__title" id="modal-title">
                     Свяжитесь с нами!
                 </h3>
             </div>
-            <form class="modal-feedback-form" action="">
-                <div class="modal__content" id="modal-feedback-content">
-                    <label class="modal-feedback__label">
-                        <h4 class="modal-feedback__label-title">
+            <form class="modal-form" action="">
+                <div class="modal__content" id="modal-content">
+                    <label class="modal__label">
+                        <h4 class="modal__label-title">
                             Имя
                         </h4>
-                        <input class="modal-feedback__input" type="text" placeholder="Дин">
+                        <input class="modal__input" type="text" placeholder="Дин">
                     </label>
-                    <label class="modal-feedback__label">
-                        <h4 class="modal-feedback__label-title">
+                    <label class="modal__label">
+                        <h4 class="modal__label-title">
                             Контакт для связи
                         </h4>
-                        <input class="modal-feedback__input" type="text" placeholder="@ritofos_support">
+                        <input class="modal__input" type="text" placeholder="@ritofos_support">
                     </label>
                     <label>
-                        <h4 class="modal-feedback__label-title">
+                        <h4 class="modal__label-title">
                             Выберите лучший мессенджер для связи
                         </h4>
-                        <input class="modal-feedback__input" type="text">
-                        <ul class="modal-feedback__select">
-
-                        </ul>
+                        <div class="modal-select" data-state>
+                            <div class="modal-select__title" data-default="Telegram">Telegram</div>
+                            <div class="modal-select__content">
+                              <input id="feedback-modal__option-0" class="modal-select__input" type="radio" checked />
+                              <label for="feedback-modal__option-0" class="modal-select__label">Telegram</label>
+                              <input id="feedback-modal__option-1" class="modal-select__input" type="radio"/>
+                              <label for="feedback-modal__option-1" class="modal-select__label">Telegram</label>
+                              <input id="feedback-modal__option-2" class="modal-select__input" type="radio" />
+                              <label for="feedback-modal__option-2" class="modal-select__label">Viber</label>
+                              <input id="feedback-modal__option-3" class="modal-select__input" type="radio"/>
+                              <label for="feedback-modal__option-3" class="modal-select__label">Whatsapp</label>
+                            </div>
+                          </div>
                     </label>
                 </div>
                 <div class="modal__footer">
-                    <button type="submit" class="modal-feedback__btn btn-blue">Отправить</button>
+                    <button type="submit" class="modal__btn btn-blue">Отправить</button>
                 </div>
             </form>
         </div>

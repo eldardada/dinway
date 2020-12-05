@@ -13,6 +13,7 @@ import news from './modules/news.js';
 import {video} from './modules/video.js';
 import hero_main from './modules/hero/hero_main.js';
 import {nav} from './modules/nav-list';
+import {modal} from './modules/modal';
 
 window.addEventListener('load', function() {
     menu();
