@@ -2,8 +2,12 @@
     &__title
         text-align: center
         margin-bottom: 80px
-        +sm-block
-            text-align: left
+        +md-block
+            margin-bottom: 30px
+    &__container
+        @media screen and ( max-width: 420px )
+            padding-right: 0
+
 .team-person
     text-align: center
     &__up

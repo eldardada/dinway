@@ -1,5 +1,4 @@
 .faq
-    padding-bottom: 160px
     &__title
         color: var(--color-midnight)
         text-align: center
@@ -13,25 +12,8 @@
     &__btn
         cursor: pointer
         font-size: 16px
-        color: var(--color-orange)
-        padding: 0
-        border: none
-        background-color: transparent
-        position: relative
-        &.close
-            display: none
-        &:focus
-            outline: none
-        &:not(:last-child)
-            margin-right: 30px
-        &::after
-            content: ''
-            display: block
-            position: absolute
-            width: 100%
-            height: 1px
-            margin-top: 15px
-            background-color: var(--color-orange)
+        &:not(:first-child)
+            margin-left: 30px
             
 .questions
     &__item
@@ -40,17 +22,16 @@
         &:not(:last-child)
             margin-bottom: 20px
         &.active
-            border: 2px solid #EBF1FE
+            border: 2px solid var(--hawkes-blue)
             border-top: 2px solid transparent
             .question__arrow
                 transform: rotate(180deg)
-
 
 .question
     display: flex
     align-items: center
     cursor: pointer
-    background-color: #EBF1FE
+    background-color: var(--hawkes-blue)
     padding: 21px 40px
     border-radius: 36px
     position: relative
