@@ -1,7 +1,6 @@
 import {Swiper, Navigation} from 'swiper';
 Swiper.use([Navigation]);
 
-
 export const team = () => {
     const team = document.querySelector('.team');
 

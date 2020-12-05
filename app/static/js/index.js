@@ -6,7 +6,7 @@ import {bizes} from './modules/bizes.js';
 import menu from './modules/menu.js';
 import {simpleSlider} from './modules/simple-slider.js';
 // import why from './modules/why.js';
-import team from './modules/team.js';
+// import team from './modules/team.js';
 import faq from './modules/faq.js';
 import news from './modules/news.js';
 import {video} from './modules/video.js';
@@ -19,7 +19,7 @@ window.addEventListener('load', function() {
     bizes();
     // why();
     simpleSlider();
-    team();
+    // team();
     faq();
     news();
     hero_main();

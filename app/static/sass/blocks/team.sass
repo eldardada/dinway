@@ -8,6 +8,14 @@
         @media screen and ( max-width: 420px )
             padding-right: 0
 
+
+.team-blocks
+    display: grid
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr))
+    @media screen and ( max-width: 1080px )
+        max-width: 750px
+        margin: 0 auto
+        
 .team-person
     text-align: center
     &__up
@@ -20,14 +28,11 @@
             font-size: 16px
     &__subtitle
         font-size: 16px
-
-
-.team-person-img
-    height: 330px
-    width: 261px
-    +bp1250-block
-        width: 200px
-        height: 240px
-    +bp900-block
-        width: 163.76px
-        height: 206px
+        max-width: 230px
+        margin: 0 auto
+    &-img
+        height: 330px
+        width: 261px
+        +bp900-block
+            width: 200px
+            height: 240px
