@@ -1,5 +1,6 @@
-import {Swiper, Navigation, Autoplay} from 'swiper';
-Swiper.use([Navigation, Autoplay]);
+/* import {Swiper, Navigation, Autoplay} from 'swiper';
+Swiper.use([Navigation, Autoplay]); */
+import MicroModal from 'micromodal';
 
 // modules
 import {bizes} from './modules/bizes.js';
@@ -24,5 +25,5 @@ window.addEventListener('load', function() {
     news();
     hero_main();
     video();
-
+    MicroModal.init();
 });

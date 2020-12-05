@@ -11,7 +11,7 @@
         width: 90%;
         max-width: 800px;
         max-height: 500px;
-        z-index: 200;
+        z-index: 100;
         position: fixed;
         top: 50%;
         left: 50%;
@@ -39,7 +39,7 @@
         display: none;
         cursor: pointer;
         stroke: var(--color-white);
-        z-index: 200;
+        z-index: 100;
         position: absolute;
         right: 5px;
         top: 10px;
