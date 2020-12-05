@@ -1,37 +1,23 @@
-.hero.hero_main 
+.hero.hero_main
     .hero-content
-        grid-template-columns: 500px 1fr
+        max-width: 1280px
+        grid-template-columns: 5fr 7fr
         +bp1050-block
             grid-template-columns: 1fr
-            padding-top: 30px
-    .hero-img
-        justify-self: end
+    .hero__title
         +bp1050-block
-            justify-self: center
-        &__img
-            +bp1050-block
-                margin-left: auto
-        &__youtube
-            position: absolute
-            top: 52%
-            left: 31%
-            cursor: pointer
-            display: flex
-    .hero-text
-        &__info
-            padding: 10px
-            white-space: nowrap
-            width: min-content
-            border-radius: 30px
-            color: #3EECC2
-            border: 1px solid currentColor
-            font-style: normal
-            font-weight: bold
-            font-size: 12px
-            line-height: 140%
-            margin-bottom: 18px
+            text-align: center
+            max-width: 840px
+            margin: 0 auto 30px
 
-.hero-title_main
+    .hero-img__youtube
+        position: absolute
+        top: 52%
+        left: 30.5%
+        cursor: pointer
+        display: flex
+
+.hero-title
     font-size: 72px
     font-weight: 700
     line-height: 100%
@@ -43,7 +29,7 @@
         font-size: 50px
         text-align: center
 
-.hero-subtitle_main
+.hero-subtitle
     line-height: 29px
     font-size: 18px
     font-style: normal

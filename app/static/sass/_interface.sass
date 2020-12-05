@@ -1,3 +1,5 @@
+html
+    scroll-behavior: smooth
 body
     color: var(--color-dark)
     font-size: $bodyFz
@@ -38,13 +40,13 @@ body
     background-color: var(--color-blue)
     border-radius: 46px
     padding: 16px 40px
-    font-size: 16px
-    color: #fff
+    font-size: 12px !important
+    color: var(--color-white)
     border: 1px solid transparent
     transition: background-color .3s, border .3s, color .3s
     &:hover
         background-color: transparent
-        color: #1448B6
+        color: var(--color-blue)
         border: 1px solid var(--color-blue)
 
 .hover-text-white
@@ -87,8 +89,20 @@ body
             width: 0
 
 .icon_white
-    fill: #fff
+    fill: var(--color-white)
 
+
+.btn-green
+    padding: 10px
+    white-space: nowrap
+    width: min-content
+    border-radius: 30px
+    color: var(--color-turquoise)
+    border: 1px solid currentColor
+    font-style: normal
+    font-weight: bold
+    font-size: 12px
+    line-height: 140%
 
 .overlay
     position: fixed

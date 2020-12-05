@@ -2,6 +2,8 @@
     &-content
         display: grid
         grid-template-areas: "text img" "btns img"
+        grid-template-columns: 1fr 1fr
+        grid-gap: 30px
         align-items: center
         +bp1050-block
             grid-row-gap: 30px
@@ -11,6 +13,8 @@
         grid-area: text
         +bp1050-block
             justify-self: center
+        &__info
+            margin-bottom: 18px
     &-img
         position: relative
         grid-area: img
