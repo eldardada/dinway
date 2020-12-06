@@ -1,0 +1,87 @@
+.invest-conditions
+    display: grid
+    grid-gap: 40px
+    grid-template-columns: repeat(auto-fill, minmax(256px, 1fr))
+    @media screen and ( max-width: 1205px )
+        max-width: 840px
+        margin: 0 auto
+.invest-condition
+    display: flex
+    flex-direction: column
+    text-align: center
+    &-top
+        position: relative
+        max-height: 183px
+        border-radius: 30px
+        padding-bottom: 16px
+        margin-bottom: 20px
+        &__title
+            text-transform: uppercase
+            font-weight: 700
+            font-size: 22px
+            padding: 8px 10px
+            background-color: var(--color-white)
+            border-radius: 30px
+            margin-bottom: 14px
+        &__text
+            &-percent
+                display: block
+                font-weight: 700
+                font-size: 52px
+                color: var(--color-white)
+            &-time
+                font-family: Montserrat
+                font-weight: 700
+                font-size: 16px
+                color: var(--color-white)
+                margin-bottom: 12px
+            &-profit
+                font-family: Montserrat
+                font-size: 16px
+                line-height: 20px
+                color: rgba(255, 255, 255, 0.5)
+    &-bottom
+        background-color: var(--color-white)
+        border-radius: 25px
+        &__title
+            margin-top: 30px
+            font-weight: 700
+            font-size: 16px
+            margin-bottom: 20px
+        &-list
+            padding: 0 30px
+            text-align: left
+            max-width: 200px
+            margin: 0 auto 20px
+            &__item
+                display: flex
+                align-items: center
+                &:not(:last-child)
+                    margin-bottom: 10px
+            &__text
+                flex-grow: 1
+                margin-left: 5px
+                
+        &__period
+            text-transform: uppercase
+            font-size: 16px
+            color: var(--color-white)
+            padding: 12px 0
+            margin-bottom: 30px
+        &__btn
+            margin-bottom: 30px
+
+.invest-condition
+    &--1 .invest-condition-top, &--1 .invest-condition-bottom__period
+        background: linear-gradient(to right, #f46b45, #eea849)
+    &--2 .invest-condition-top, &--2 .invest-condition-bottom__period
+        background: linear-gradient(to right, #de6161, #2657eb)
+    &--3 .invest-condition-top, &--3 .invest-condition-bottom__period
+        background: linear-gradient(to right, #155799, #159957)
+    &--4 .invest-condition-top, &--4 .invest-condition-bottom__period
+        background: linear-gradient(to right, #e9d362, #333333)
+
+    
+    
+
+
