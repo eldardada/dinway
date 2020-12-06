@@ -9,6 +9,15 @@
             grid-row-gap: 30px
             grid-template-columns: 1fr
             grid-template-areas: "text" "img" "btns"
+    &__title
+        +bp1050-block
+            text-align: center  
+            max-width: 100%
+    &__subtitle
+        +bp1050-block
+            max-width: 700px
+            margin: 0 auto
+        
     &-text
         grid-area: text
         +bp1050-block
@@ -20,8 +29,6 @@
         grid-area: img
         +bp1050-block
             justify-self: center
-        &__img
-            display: flex
     &-btns
         grid-area: btns
         position: relative

@@ -1,5 +1,4 @@
-@import './_list-image-title_promotion'
-@import './_list-image-title_advantages'
+@import './_list-image-title-blocks-settings'
 
 .list-image-title
     &__container
@@ -55,5 +54,6 @@
         font-weight: bold
         font-size: 18px
         line-height: 140%
-    @media screen and ( max-width: 800px )
+        max-width: 320px
+    +bp900-block
         justify-self: center
