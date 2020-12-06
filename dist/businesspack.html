@@ -252,7 +252,7 @@
                     </div>
                 </div>
                 <div class="step-btns">
-                    <a href="#" class="step__btn btn-transparent">Узнать больше</a>
+                    <button class="step__btn btn-transparent" data-micromodal-trigger="modal-price">Посмотреть прайс</button>
                 </div>
             </div>
             <div class="step instraction__step">
@@ -280,7 +280,7 @@
                     </div>
                 </div>
                 <div class="step-btns">
-                    <a href="#" class="step__btn btn-transparent">Узнать больше</a>
+                    <a href="#" class="step__btn btn-transparent">Перейти к примерам</a>
                 </div>
             </div>
             <div class="step instraction__step">
@@ -290,7 +290,7 @@
                 <div class="step-media">
                     <div class="step-media-text">
                         <p class="step-media-text__text">Стоимость сопровождения рассчитывается индивидуально в зависимости от различных факторов, в частности использованных на предыдущих этапах инструментов, ниши, ситуации на рынке. Для расчёта стоимости вы можете заказать бесплатную консультацию.</p>
-                        <button class="step__btn btn-transparent">Получить консультацию</button>
+                        <button class="step__btn btn-transparent" data-micromodal-trigger="modal-feedback">Получить консультацию</button>
                     </div>
                     <div class="step-media-img">
                         <img src="static/img/instraction/step-4-img.svg" alt="" class="step-media-img__image">
@@ -651,6 +651,54 @@
                     <button type="button" class="modal__btn btn-blue">Далее</button>
                 </div>
             </form>
+        </div>
+    </div>
+</div>
+    <!-- Прайс -->
+<div class="modal micromodal-slide" id="modal-price" aria-hidden="true">
+    <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__container modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+            <button class="modal__close" aria-label="Закрыть модальное окно" data-micromodal-close>X</button>
+            <div class="modal-info">
+                <div class="modal-info__block strong">Разработка:</div>
+                <div class="modal-info__block">
+                    <ul class="modal-info-list">
+                        <li class="modal-info-list__item">Создание LandingPage <strong class="strong">от 200$</strong></li>
+                        <li class="modal-info-list__item">Создание корпоративного сайта <strong class="strong">от 400$</strong></li>
+                        <li class="modal-info-list__item">Создание интернет-магазина <strong class="strong">от 800$</strong></li>
+                        <li class="modal-info-list__item">Разработка мобильных приложений <strong class="strong">от 2000$</strong></li>
+                        <li class="modal-info-list__item">Разработка туннелей продаж <strong class="strong">от 800$</strong></li>
+                    </ul>
+                </div>
+                <div class="modal-info__block strong">Продвижение:</div>
+                <div class="modal-info__block">
+                    <ul class="modal-info-list">
+                        <li class="modal-info-list__item">Упаковка социальных сетей <strong class="strong">от 200$</strong></li>
+                        <li class="modal-info-list__item">Таргетированная реклама <strong class="strong">от 300$</strong></li>
+                        <li class="modal-info-list__item">Контекстная реклама (Google, Yandex) <strong>от 300$</strong></li>
+                        <li class="modal-info-list__item">SЕО-оптимизация внутренняя <strong class="strong">от 100$</strong></li>
+                        <li class="modal-info-list__item">Разработка туннелей продаж <strong class="strong">от 400$</strong></li>
+                    </ul>
+                </div>
+                <div class="modal-info__block strong">Дизайн:</div>
+                <div class="modal-info__block">
+                    <ul class="modal-info-list">
+                        <li class="modal-info-list__item">Визуальная концепция бизнеса (бренд бук) <strong class="strong">от 200$</strong></li>
+                        <li class="modal-info-list__item">Визуальный контент  для соц. сетей  <strong class="strong">от 100$</strong></li>
+                        <li class="modal-info-list__item">Презентации от <strong class="strong">от 40$</strong></li>
+                        <li class="modal-info-list__item">UX/UI дизайн веб-сайта<strong class="strong">от 100$</strong></li>
+                        <li class="modal-info-list__item">Стикеры <strong class="strong">от 30$</strong></li>
+                        <li class="modal-info-list__item">Дизайн рекламных креативов <strong class="strong">от 10$</strong></li>
+                    </ul>
+                </div>
+                <div class="modal-info__block strong">Создание видео-контента:</div>
+                <div class="modal-info__block">
+                    <ul class="modal-info-list">
+                        <li class="modal-info-list__item">Монтаж видеороликов <strong class="strong">от 70$</strong></li>
+                        <li class="modal-info-list__item">Сценарии для видеороликов  <strong class="strong">от 40$</strong></li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 </div>
