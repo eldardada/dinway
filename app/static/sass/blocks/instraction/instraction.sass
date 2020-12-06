@@ -1,3 +1,5 @@
+@import './_instractions-block-settings'
+
 .instraction
     &__step
         &:not(:last-child)
@@ -11,6 +13,8 @@
         display: flex
         align-items: center
         margin-bottom: 60px
+        +md-block
+            margin-bottom: 30px
         +xs-block
             flex-direction: column-reverse
             align-items: start
@@ -25,9 +29,14 @@
         margin-right: 40px
         color: var(--color-blue)
         +xs-block
-            margin-top: 15px
+            margin: 15px 0 0
+        +sm-block
+            font-size: 30px
         +xxs-block
-            font-size: 34px
+            font-size: 27px
+    &__info
+        width: 160px
+        text-align: center
     &__step-blocks
         margin-bottom: 59px
     &-blocks
@@ -62,15 +71,32 @@
                 height: 159px
             @media screen and ( max-width: 815px )
                 height: max-content
-                
     &__btn
         display: inline-block
         font-family: inherit
         font-size: 16px
         padding: 20px 50px
     &-btns
+        display: flex
+        align-items: center
         @media screen and ( max-width: 815px )
+            flex-direction: column
             margin: 0 auto
+        &__info
+            margin-left: 20px
+            display: flex
+            align-items: center
+            @media screen and ( max-width: 815px )
+                margin: 20px 0 0
+                text-align: center
+        &__info-text
+            margin-left: 8px
+            color: var(--color-midnight)
+        &__info-img
+            +xs-block
+                display: none
+        
+        
 
 .step-media
     display: grid
