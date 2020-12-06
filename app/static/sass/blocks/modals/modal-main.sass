@@ -34,6 +34,7 @@
             font-family: 'Jura'
             margin-bottom: 15px 
     &__input
+        box-sizing: border-box
         font-family: 'Jura'
         display: block
         border: none
@@ -65,3 +66,36 @@
     &__text
         text-align: center
         margin-bottom: 10px
+
+.modal_audit
+    .modal__content:not([data-current])
+        display: none
+    .modal__submit
+        display: none
+
+.modal-form
+    &__title
+        margin-bottom: 20px
+    &__checkbox
+        position: relative
+        display: block
+        padding-left: 30px
+        &:not(:last-child)
+            margin-bottom: 10px
+        span
+            display: block
+            width: 20px
+            height: 20px
+            position: absolute
+            left: 0
+            top: 50%
+            transform: translateY(-50%)
+            background-image: url('static/img/input-default.svg')
+        input
+            appearance: none
+            left: 0
+            position: absolute
+            &:checked + span
+                background-image: url('static/img/input-checked.svg')
+
+

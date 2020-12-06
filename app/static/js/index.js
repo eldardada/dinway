@@ -16,16 +16,17 @@ import {nav} from './modules/nav-list';
 import {modal} from './modules/modal';
 
 window.addEventListener('load', function() {
-    menu();
-    nav();
-    bizes();
+    // menu();
+    // nav();
+    // bizes();
     // why();
-    simpleSlider();
+    // simpleSlider();
     // team();
-    faq();
-    news();
-    hero_main();
-    video();
+    // faq();
+    // news();
+    // hero_main();
+    // video();
     MicroModal.init();
+    MicroModal.show('modal-poll');
     modal();
 });
