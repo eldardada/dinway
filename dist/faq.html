@@ -1,4 +1,13 @@
-<header class="header page__header">
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Dinway</title>
+</head>
+<body>
+    <header class="header page__header">
     <div class="container header__container">
         <div class="header__top">
             <div class="currency">
@@ -116,3 +125,111 @@
     </div>
     
 </header>
+    <main class="main">
+        <section class="faq-search">
+    <div class="container faq-search__container">
+        
+    </div>
+</section>
+    </main>
+
+    <!-- Форма обратной связи -->
+<div class="modal micromodal-slide" id="modal-feedback" aria-hidden="true">
+    <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__container modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+            <button class="modal__close" aria-label="Закрыть модальное окно" data-micromodal-close>X</button>
+            <div class="modal__header modal__header">
+                <h3 class="modal__title" id="modal-title">
+                    Свяжитесь с нами!
+                </h3>
+            </div>
+            <form class="modal-form">
+                <div class="modal__content" id="modal-content">
+                    <label class="modal__label">
+                        <span class="modal__label-title">
+                            Имя
+                        </span>
+                        <input class="modal__input" type="text" placeholder="Дин">
+                    </label>
+                    <label class="modal__label">
+                        <span class="modal__label-title">
+                            Контакт для связи
+                        </span>
+                        <input class="modal__input" type="text" placeholder="@ritofos_support">
+                    </label>
+                    <span class="modal__label-title">
+                        Выберите лучший мессенджер для связи
+                    </span>
+                    <div class="modal-select" data-state>
+                        <div class="modal-select__title" data-default="Telegram">Telegram</div>
+                        <div class="modal-select__content">
+                            <input id="feedback-modal__option-0" class="modal-select__input" type="radio" checked />
+                            <label for="feedback-modal__option-0" class="modal-select__label">Telegram</label>
+                            <input id="feedback-modal__option-1" class="modal-select__input" type="radio"/>
+                            <label for="feedback-modal__option-1" class="modal-select__label">Telegram</label>
+                            <input id="feedback-modal__option-2" class="modal-select__input" type="radio" />
+                            <label for="feedback-modal__option-2" class="modal-select__label">Viber</label>
+                            <input id="feedback-modal__option-3" class="modal-select__input" type="radio"/>
+                            <label for="feedback-modal__option-3" class="modal-select__label">Whatsapp</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal__footer">
+                    <button type="submit" class="modal__btn btn-blue">Отправить</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+    <div class="overlay "></div>
+    <footer class="footer">
+    <svg class="footer__wave" viewBox="0 0 1357 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M371.5 23.0001C250.3 19.8001 74 37.6668 1 47.0001H1356.5V1.00032C1312.17 0.666982 1217.8 0.200315 1195 1.00032C1172.2 1.80032 999.167 20.0003 915.5 29.0003C778.5 48.5003 523 27.0001 371.5 23.0001Z" stroke="black"/>
+    </svg>
+    <div class="container footer__container">
+        <div class="footer-text">
+            <h2 class="footer__title">Контакты</h2>
+            <div class="social footer__social">
+                <a href="#" target="_blank">
+                    <svg class="social__insta social__icon icon_white">
+                        <use xlink:href="./static/img/svg/sprite.svg#insta"></use>
+                    </svg>
+                </a>
+                <a href="#" target="_blank">
+                    <svg class="social__whatsapp social__icon icon_white">
+                        <use xlink:href="./static/img/svg/sprite.svg#whatsapp"></use>
+                    </svg>
+                </a>
+                <a href="#" target="_blank">
+                    <svg class="social__telegram social__icon icon_white">
+                        <use xlink:href="./static/img/svg/sprite.svg#telegram"></use>
+                    </svg>
+                </a>
+                <a href="#" target="_blank">
+                    <svg class="social__youtube social__icon icon_white">
+                        <use xlink:href="./static/img/svg/sprite.svg#youtube"></use>
+                    </svg>
+                </a>
+                <a href="#" target="_blank">
+                    <svg class="social__fb social__icon icon_white">
+                        <use xlink:href="./static/img/svg/sprite.svg#fb"></use>
+                    </svg>
+                </a>
+                <a href="#" target="_blank">
+                    <svg class="social__vk social__icon icon_white">
+                        <use xlink:href="./static/img/svg/sprite.svg#vk"></use>
+                    </svg>
+                </a>
+            </div>
+            <h3 class="footer__desc">(с) 2020-2021 Dinway. Пользуясь данным сайтом, вы соглашаетесь с <a href="#">правилами использования</a></h3>
+        </div>
+        
+        <div class="footer-img">
+            <img class="footer-img__image" src="static/img/footer/footer-img.svg" alt="Пунктуальный жираф">
+        </div>
+
+    </div>
+</footer>
+    <script src="static/js/script.js"></script>
+</body>
+</html>
