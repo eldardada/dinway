@@ -24,4 +24,5 @@ window.addEventListener('load', function() {
     video();
     MicroModal.init();
     modal();
+    window.addEventListener('resize', menu);
 });

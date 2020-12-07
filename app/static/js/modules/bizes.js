@@ -17,7 +17,7 @@ export function bizes() {
                 nextEl: '.bizes-slider__slider-next'
             },
             breakpoints: {
-                720: {
+                768: {
                     loop: true,
                     slidesPerView: 2,
                     direction: 'horizontal',

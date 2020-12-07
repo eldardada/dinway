@@ -22,7 +22,7 @@ export const menu = () => {
 
         let items = document.querySelectorAll('.nav-list__item');
         
-        if(window.innerWidth <= 720) {
+        if(window.innerWidth <= 768) {
             items.forEach(item => {
                 item.addEventListener('click', () => {
                     let listNested = item.querySelector('.list-nested');
