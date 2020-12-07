@@ -1,5 +1,7 @@
 @import burger
-
+.currency
+    text-align: center
+    
 .header
     &__top
         position: absolute
@@ -48,6 +50,9 @@
             cursor: pointer
             white-space: nowrap
             position: relative
+            +md-block
+                height: 16px
+                overflow: hidden
             &:not(:last-child)
                 margin-right: 30px
                 +md-block
@@ -80,29 +85,35 @@
                     height: 2px
                     width: 0
                     background-color: var(--color-orange)
-        &__nested
-            font-size: inherit
-            position: absolute
-            top: 100%
-            left: 0
-            right: 0
-            display: none
-            +md-block
-                text-align: center
-                position: static
         &-nested
-            &__item:not(:last-child)
-                margin-bottom: 7px
-            a
-                color: inherit
-                text-decoration: none
-            &.active
-                display: block
+            
+            
 
-        
-.header.active
+.list-nested
+    font-size: inherit
+    position: absolute
+    top: 100%
+    left: 0
+    right: 0
+    transform: scaleY(0)
+    transition: transform .3s
+    transform-origin: top
     +md-block
-        .nav
+        text-align: center
+        position: static
+    &__item
+        a
+            color: inherit
+            text-decoration: none
+        &:not(:last-child)
+            margin-bottom: 7px
+    &.active
+        transform: scaleY(1)
+
+  
+.header.active
+    .nav
+        +md-block
             transform: translateX(0)
     ~ .overlay
         display: block
