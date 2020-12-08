@@ -7,7 +7,6 @@
         background-color: var(--hawkes-blue)
     &__qna
         padding-top: 50px
-    
 .faq-questions-list
     &__item
         background-color: var(--co)
@@ -22,3 +21,23 @@
         color: var(--color-black)
         font-size: 14px
         line-height: 19px
+
+.faq-questions
+    .questions__item
+        border-radius: 25px
+        border: 2px solid transparent
+        &.active
+            border: 2px solid var(--color-black)
+            background-color: var(--hawkes-blue)
+            .question
+                color: var(--color-white)
+                background-color: var(--color-blue)
+                border-radius: 25px 25px 0 0
+                border-bottom: 2px solid var(--color-black)
+                &__arrow
+                    fill: #fff !important
+        .answer
+            position: relative
+            background-color: var(--hawkes-blue)
+            z-index: 2
+            border-radius: 25px
