@@ -7,15 +7,19 @@
     <title>Dinway</title>
 </head>
 <body>
-    @@include("static/html/header.html")
-    <main class="main">
-        @@include('static/html/faq-search.html')
-        @@include('static/html/faq-questions.html')
-    </main>
+    <div class="faq-page">
+        @@include("static/html/header.html")
+        <main class="main main-faq">
+            @@include('static/html/faq-search.html')
+            @@include('static/html/faq-questions.html')
+        </main>
+    
+        @@include("static/html/modal-feedback.html")
+        @@include("static/html/overlay.html")
+        @@include("static/html/footer.html")
 
-    @@include("static/html/modal-feedback.html")
-    @@include("static/html/overlay.html")
-    @@include("static/html/footer.html")
+    </div>
+    
     <script src="static/js/script.js"></script>
 </body>
 </html>

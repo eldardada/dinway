@@ -1,7 +1,7 @@
 import {Swiper, Virtual, Pagination} from 'swiper';
 Swiper.use([Virtual, Pagination]);
 import {questionsItems} from './qustions-items';
-import {questionOnClick, removeQuestions, getQuestions} from './../questions';
+import {questionOnClick, getQuestions} from './../questions';
 
 export const faqQuestions = () => {
 
@@ -13,28 +13,39 @@ export const faqQuestions = () => {
 
         questionOnClick(wrapper);
 
-        const menu = document.querySelector('.faq-questions-list')
+        function createSlideStructure(catagory) {
+            let questions = getQuestions(questionsItems[catagory]);
+            let slides = [];
+            for (let i = 0; i < questions.length; i++) {
+              slides.push(questions[i]);
+            }
+            return slides;
+        }
 
-        let slider = new Swiper('.faq-questions__qna .swiper-container', {
-            height: 50,
-            slidesPerView: 6,
+        const menu = document.querySelector('.faq-questions-list')
+        let sliderSelector = '.faq-questions__qna .swiper-container';
+        let sliderSettings = {
+            slidesPerView: 8,
             direction: 'vertical',
             spaceBetween: 20,
             pagination: {
                 el: '.swiper-pagination',
                 clickable: true,
+                type: 'bullets',
+                dynamicBullets: true,
+                
+                renderCustom: (index, className) => {
+                    return '<span class="' + className + '">' + (index + 1) + '</span>';
+                },
             },
             virtual: {
-                slides: (function () {
-                    let questions = getQuestions(questionsItems['popular']);
-                    let slides = [];
-                  for (let i = 0; i < questions.length; i++) {
-                    slides.push(questions[i]);
-                  }
-                  return slides;
-                }()),
+                slides: (function() {
+                   return createSlideStructure('popular');
+                })()
             }
-        });
+        }
+
+        let slider = new Swiper(sliderSelector, sliderSettings);
 
         menu.addEventListener('click', e => {
             const target = e.target;
@@ -44,9 +55,14 @@ export const faqQuestions = () => {
                         target.querySelector('[data-question]');
                     if(btn) {
                         let category = btn.dataset.question;
-                        let questions = getQuestions(questionsItems[category]);
+                        console.log('category :', category);
+
+                        sliderSettings.virtual.slides = (function() {
+                            return createSlideStructure(category);
+                        })();
                         slider.virtual.removeAllSlides();
-                        questions.forEach(question => slider.virtual.appendSlide(question));
+                        slider.destroy();
+                        slider = new Swiper(sliderSelector, sliderSettings)
                     }
                 }
             }

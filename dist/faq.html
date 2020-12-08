@@ -7,7 +7,8 @@
     <title>Dinway</title>
 </head>
 <body>
-    <header class="header page__header">
+    <div class="faq-page">
+        <header class="header page__header">
     <div class="container header__container">
         <div class="header__top">
             <div class="currency">
@@ -125,8 +126,8 @@
     </div>
     
 </header>
-    <main class="main">
-        <section class="faq-search">
+        <main class="main main-faq">
+            <section class="faq-search">
     <div class="container faq-search__container">
         <div class="faq-search__content">
             <div class="faq-search__left">
@@ -144,47 +145,31 @@
         </div>
     </div>
 </section>
-        <section class="faq-questions">
+            <section class="faq-questions">
     <div class="container faq-questions__container">
         <div class="faq-questions__content">
             <div class="faq-questions__aside">
                 <ul class="faq-questions-list">
-                    <li class="faq-questions-list__item faq-questions-list__item--current"><a class="faq-questions-list__link" href="#">Популярное</a></li>
-                    <li class="faq-questions-list__item"><a class="faq-questions-list__link" href="#">Blogtime</a></li>
-                    <li class="faq-questions-list__item"><a class="faq-questions-list__link" href="#">Business pack</a></li>
-                    <li class="faq-questions-list__item"><a class="faq-questions-list__link" href="#">Партнерская программа</ф></li>
-                    <li class="faq-questions-list__item"><a class="faq-questions-list__link" href="#">Образование</a></li>
-                    <li class="faq-questions-list__item"><a class="faq-questions-list__link" href="#">Инвестиции</a></li>
+                    <li class="faq-questions-list__item faq-questions-list__item--current"><button class="faq-questions-list__link" data-question="popular">Популярное</button></li>
+                    <li class="faq-questions-list__item"><button class="faq-questions-list__link" data-question="blogTime">Blogtime</button></li>
+                    <li class="faq-questions-list__item"><button class="faq-questions-list__link" data-question="businessPack">Business pack</button></li>
+                    <li class="faq-questions-list__item"><button class="faq-questions-list__link" data-question="aflilateProgram">Партнерская программа</ф></li>
+                    <li class="faq-questions-list__item"><button class="faq-questions-list__link" data-question="education">Образование</button></li>
+                    <li class="faq-questions-list__item"><button class="faq-questions-list__link" data-question="investments">Инвестиции</button></li>
                 </ul>
             </div>
-            <div class="faq-questions__qna questions">
+            <div class="faq-questions__qna">
                 <div class="swiper-container">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="questions__item">
-                                <div class="question">
-                                    <p class="question__text">Какие гарантии долгосрочной работы компании?</p>
-                                    <svg class="question__arrow" width="13" height="9" viewBox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M7.90691 7.60752C7.12756 8.37888 5.87244 8.37888 5.0931 7.60753L0.863676 3.42149C-0.406267 2.16457 0.483796 0 2.27058 0H10.7294C12.5162 0 13.4063 2.16457 12.1363 3.42148L7.90691 7.60752Z" fill="#001032"/>
-                                    </svg>
-                                </div>
-                                <div class="answer">
-                                    <div class="answer__container">
-                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores voluptates impedit sit, veniam at itaque, officiis quas commodi blanditiis esse, recusandae eligendi velit excepturi obcaecati ipsum doloribus soluta! Soluta, aut!
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <div class="swiper-wrapper"></div>
+                    <div class="swiper-pagination"></div>
                 </div>
-                
             </div>
         </div>
     </div>
 </section>
-    </main>
-
-    <!-- Форма обратной связи -->
+        </main>
+    
+        <!-- Форма обратной связи -->
 <div class="modal micromodal-slide" id="modal-feedback" aria-hidden="true">
     <div class="modal__overlay" tabindex="-1" data-micromodal-close>
         <div class="modal__container modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-title">
@@ -232,8 +217,8 @@
         </div>
     </div>
 </div>
-    <div class="overlay "></div>
-    <footer class="footer">
+        <div class="overlay "></div>
+        <footer class="footer">
     <svg class="footer__wave" viewBox="0 0 1357 48" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M371.5 23.0001C250.3 19.8001 74 37.6668 1 47.0001H1356.5V1.00032C1312.17 0.666982 1217.8 0.200315 1195 1.00032C1172.2 1.80032 999.167 20.0003 915.5 29.0003C778.5 48.5003 523 27.0001 371.5 23.0001Z" stroke="black"/>
     </svg>
@@ -281,6 +266,9 @@
 
     </div>
 </footer>
+
+    </div>
+    
     <script src="static/js/script.js"></script>
 </body>
 </html>
