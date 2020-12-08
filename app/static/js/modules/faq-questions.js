@@ -55,7 +55,11 @@ export const faqQuestions = () => {
                         target.querySelector('[data-question]');
                     if(btn) {
                         let category = btn.dataset.question;
-                        console.log('category :', category);
+                        let item = btn.closest('.faq-questions-list__item');
+                        menu.querySelectorAll('.faq-questions-list__item').forEach(item => {
+                            if(item.classList.contains('faq-questions-list__item--current')) item.classList.remove('faq-questions-list__item--current');
+                        });
+                        item.classList.add('faq-questions-list__item--current')
 
                         sliderSettings.virtual.slides = (function() {
                             return createSlideStructure(category);
