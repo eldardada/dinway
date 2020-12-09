@@ -19,19 +19,14 @@ export function removeQuestions(wrapper) {
 }
 
 // возвращает вопросы со startPosition (по умолчанию 0) до endPosition, не включая endPosition (по умолчанию null)
-export function getQuestions(questionsItems, startPosition, endPosition) {
-    let items = Object.values(questionsItems);
+export function getQuestions(questionsArray, startPosition, endPosition) {
     
     startPosition = startPosition ?? 0;
-    endPosition = endPosition ?? questionsItems.length;
-
-    items = items.slice(startPosition, endPosition);
-
+    endPosition = endPosition ?? questionsArray.length;
+    
+    let items = questionsArray.slice(startPosition, endPosition);
     let questions = [];
-
-    for(let item of items) {
-        questions.push(createQuestion(item.question, item.answer));
-    }
+    items.forEach(item => {questions.push(createQuestion(item.question, item.answer));});
 
     return questions;
 }

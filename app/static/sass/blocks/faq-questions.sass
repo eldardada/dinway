@@ -10,12 +10,38 @@
             grid-template-columns: 1fr
     &__aside
         background-color: var(--hawkes-blue)
+        +md-block
+            padding-top: 20px
+            background-color: transparent
     &__qna
         padding: 60px 0
         +md-block
             padding-top: 0
     &__questions-pagination
         margin: 20px 0 0 auto
+    &-choice
+        position: relative
+        display: none
+        padding: 20px
+        background-color: var(--color-orange)
+        color: var(--color-white)
+        border-radius: 10px
+        &.active
+            .faq-questions-list
+                padding-bottom: 2px
+                transform: scaleY(1)
+        .faq-questions-list
+            position: absolute
+            width: 100%
+            z-index: 2
+            left: 0
+            top: calc(100% + 6px)
+            transform: scaleY(0)
+            transition: transform .3s
+            transform-origin: top
+            &__item
+                background-color: #e4e4e4
+                border-radius: 20px
 
 .faq-questions-list
     background-color: white 
@@ -40,16 +66,15 @@
         line-height: 19px
 
 .questions-pagination
-    max-width: 200px
+    width: max-content
     .questions-pagination-bulet
         display: inline-block
         border-radius: 41px
         height: 41px
         width: 41px
         line-height: 41px
-    .swiper-slide-active
-        .questions-pagination-bulet
+        text-align: center
+        &.active
             background-color: var(--color-blue)
             color: var(--color-white)
-            text-align: center
             
