@@ -9,70 +9,82 @@ export const faqQuestions = () => {
     
     if(faqQuestions) {
         
-        const wrapper = document.querySelector('.faq-questions__qna');
+        const menu = faqQuestions.querySelector('.faq-questions-list')
+        const wrapper = faqQuestions.querySelector('.questions');
+        const pagination = faqQuestions.querySelector('.questions-pagination');
 
         questionOnClick(wrapper);
+        
+        let sliderPagination = new Swiper('.questions-pagination .swiper-container', {
+            slidesPerView: 3,
+            
+        });
 
-        function createSlideStructure(catagory) {
-            let questions = getQuestions(questionsItems[catagory]);
-            let slides = [];
-            for (let i = 0; i < questions.length; i++) {
-              slides.push(questions[i]);
-            }
-            return slides;
-        }
+        function initPagination(itemsLenght, category = 'popular', part = 5) {
+            sliderPagination.removeAllSlides();
 
-        const menu = document.querySelector('.faq-questions-list')
-        let sliderSelector = '.faq-questions__qna .swiper-container';
-        let sliderSettings = {
-            slidesPerView: 8,
-            direction: 'vertical',
-            spaceBetween: 20,
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-                type: 'bullets',
-                dynamicBullets: true,
-                
-                renderCustom: (index, className) => {
-                    return '<span class="' + className + '">' + (index + 1) + '</span>';
-                },
-            },
-            virtual: {
-                slides: (function() {
-                   return createSlideStructure('popular');
-                })()
+            for (let i = 0, j = 1; i < itemsLenght; i += part) {
+                let slide = `
+                <div class="swiper-slide">
+                    <span class="questions-pagination-bulet" data-start="${i}">${j++}</span>
+                </<div>`;
+                pagination.setAttribute('data-category', category)
+                sliderPagination.appendSlide(slide);
             }
         }
 
-        let slider = new Swiper(sliderSelector, sliderSettings);
+        function insertQuestions(wrapper, category = 'popular', start, end) {
+            wrapper.innerHTML = '';
+            let questions = getQuestions(questionsItems[category], start, end);
+            questions.forEach(question => wrapper.insertAdjacentHTML('beforeend', question));
+        }
+
+        insertQuestions(wrapper, 'popular', 0, 5)
+
+        initPagination(Object.keys(questionsItems['popular']).length, 'popular', 5)
 
         menu.addEventListener('click', e => {
             const target = e.target;
+
             if(target != menu) {
                 let btn = (target.hasAttribute('data-question') ? 
                         target : false) ||
                         target.querySelector('[data-question]');
+
                     if(btn) {
                         let category = btn.dataset.question;
                         let item = btn.closest('.faq-questions-list__item');
+
                         menu.querySelectorAll('.faq-questions-list__item').forEach(item => {
                             if(item.classList.contains('faq-questions-list__item--current')) item.classList.remove('faq-questions-list__item--current');
                         });
-                        item.classList.add('faq-questions-list__item--current')
 
-                        sliderSettings.virtual.slides = (function() {
-                            return createSlideStructure(category);
-                        })();
-                        slider.virtual.removeAllSlides();
-                        slider.destroy();
-                        slider = new Swiper(sliderSelector, sliderSettings)
+                        item.classList.add('faq-questions-list__item--current')
+                        insertQuestions(wrapper, category, 0, 5)
+                        initPagination(Object.keys(questionsItems[category]).length, category, 5)
                     }
                 }
             }
         );
         
+        pagination.addEventListener('click', e => {
+            e.preventDefault();
+            let index = sliderPagination.clickedIndex;
+            console.log('index :', index);
 
-        
+            const target = e.target;
+            
+            let btn = target.hasAttribute('data-start') ? target :
+                    target.querySelector('[data-start]');
+
+            if(btn) {
+                let start = parseInt(btn.dataset.start);
+                let category = btn.closest('.questions-pagination').dataset.category;
+
+                insertQuestions(wrapper, category, start, start + 5);
+                initPagination(Object.keys(questionsItems[category]).length, category, 5);
+                sliderPagination.slideTo(index, 1000);
+            }
+        });
     }
 };

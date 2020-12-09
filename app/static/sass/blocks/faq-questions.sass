@@ -1,62 +1,55 @@
 .faq-questions
+    position: relative
+    margin-bottom: 25px
     &__content
         display: grid
         grid-template-columns: 3fr 8fr
         grid-gap: 50px
+        +md-block
+            grid-gap: 20px
+            grid-template-columns: 1fr
     &__aside
         background-color: var(--hawkes-blue)
     &__qna
-        padding-top: 50px
+        padding: 60px 0
+        +md-block
+            padding-top: 0
+    &__questions-pagination
+        margin: 20px 0 0 auto
+
 .faq-questions-list
     background-color: white 
     &__item
+        cursor: pointer
         background-color: var(--hawkes-blue)
         border-bottom: 3px solid var(--color-white)
         padding: 20px
         border-radius: 0px 20px 20px 0px
         &--current
+            border-right: 2px solid var(--hawkes-blue)
+            border-bottom: 2px solid var(--hawkes-blue)
+
             background-color: var(--color-white)
             .faq-questions-list__link
                 font-weight: 700
     &__link
+        cursor: pointer
         text-decoration: none
         color: var(--color-black)
         font-size: 14px
         line-height: 19px
 
-.faq-questions
-    position: relative
-    height: max-content
-    .swiper-container
-        padding-top: 20px
-        padding-right: 40px
-        padding-bottom: 20px
-    .swiper-slide
-        height: min-content !important
-    .questions__item
-        border-radius: 25px
-        border: 2px solid transparent
-        &.active
-            border: 2px solid var(--color-black)
-            background-color: var(--hawkes-blue)
-            .question
-                color: var(--color-white)
-                background-color: var(--color-blue)
-                border-radius: 23px 23px 0 0
-                border-bottom: 2px solid var(--color-black)
-                &__arrow path
-                    fill: var(--color-white)
-        .answer
-            position: static
-            background-color: var(--hawkes-blue)
-            z-index: 999999 !important
-            border-radius: 25px
-    .swiper-pagination
-        padding-right: 10px
-        .swiper-pagination-bullet
-            padding: 5px
-
-.faq-page
-    .footer
-        margin-top: 25px
-        z-index: 2
+.questions-pagination
+    max-width: 200px
+    .questions-pagination-bulet
+        display: inline-block
+        border-radius: 41px
+        height: 41px
+        width: 41px
+        line-height: 41px
+    .swiper-slide-active
+        .questions-pagination-bulet
+            background-color: var(--color-blue)
+            color: var(--color-white)
+            text-align: center
+            

@@ -113,7 +113,41 @@ export const questionsItems = {
         14: {
             question: 'Какие гарантии долгосрочной работы компании?',
             answer: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores voluptates impedit sit, veniam at itaque, officiis quas commodi blanditiis esse, recusandae eligendi velit excepturi obcaecati ipsum doloribus soluta! Soluta, aut!'
-        }
+        },
+        15: {
+            question: 'Какие гарантии долгосрочной работы компании?',
+            answer: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores voluptates impedit sit, veniam at itaque, officiis quas commodi blanditiis esse, recusandae eligendi velit excepturi obcaecati ipsum doloribus soluta! Soluta, aut!'
+        },
+        16:{
+            question: 'Какие гарантии долгосрочной работы компании?',
+            answer: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores voluptates impedit sit, veniam at itaque, officiis quas commodi blanditiis esse, recusandae eligendi velit excepturi obcaecati ipsum doloribus soluta! Soluta, aut!'
+        },
+        17:{
+            question: 'Какие гарантии долгосрочной работы компании?',
+            answer: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores voluptates impedit sit, veniam at itaque, officiis quas commodi blanditiis esse, recusandae eligendi velit excepturi obcaecati ipsum doloribus soluta! Soluta, aut!'
+        },
+        18: {
+            question: 'Какие гарантии долгосрочной работы компании?',
+            answer: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores voluptates impedit sit, veniam at itaque, officiis quas commodi blanditiis esse, recusandae eligendi velit excepturi obcaecati ipsum doloribus soluta! Soluta, aut!'
+        },
+        19:{
+            question: 'Какие гарантии долгосрочной работы компании?',
+            answer: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores voluptates impedit sit, veniam at itaque, officiis quas commodi blanditiis esse, recusandae eligendi velit excepturi obcaecati ipsum doloribus soluta! Soluta, aut!'
+        },
+        20:{
+            question: 'Какие гарантии долгосрочной работы компании?',
+            answer: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores voluptates impedit sit, veniam at itaque, officiis quas commodi blanditiis esse, recusandae eligendi velit excepturi obcaecati ipsum doloribus soluta! Soluta, aut!'
+        },
+        21:{
+            question: 'Какие гарантии долгосрочной работы компании?',
+            answer: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores voluptates impedit sit, veniam at itaque, officiis quas commodi blanditiis esse, recusandae eligendi velit excepturi obcaecati ipsum doloribus soluta! Soluta, aut!'
+        },
+        22:{
+            question: 'Какие гарантии долгосрочной работы компании?',
+            answer: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores voluptates impedit sit, veniam at itaque, officiis quas commodi blanditiis esse, recusandae eligendi velit excepturi obcaecati ipsum doloribus soluta! Soluta, aut!'
+        },
+        
+        
     },
     businessPack: {
         1: {
