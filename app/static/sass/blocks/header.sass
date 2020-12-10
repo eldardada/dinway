@@ -99,19 +99,22 @@
     position: absolute
     top: 100%
     left: 0
-    right: 0
+    min-width: 100%
     transform: scaleY(0)
     transition: transform .3s
     transform-origin: top
+    background-color: var(--color-white)
     +md-block
+        background-color: transparent
         text-align: center
         position: static
     &__item
+        padding: 7px
+        &:hover
+            background-color: #e4e4e4
         a
-            color: inherit
+            color: var(--color-black)
             text-decoration: none
-        &:not(:last-child)
-            margin-bottom: 7px
     &.active
         transform: scaleY(1)
 
