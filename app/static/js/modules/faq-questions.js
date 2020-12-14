@@ -1,11 +1,12 @@
 function faqQuestions() {
 
     const faqQuestions = document.querySelector('.faq-questions');
-    const menu = faqQuestions.querySelector('.faq-questions-list')
-    const wrapper = faqQuestions.querySelector('.questions');
-    const pagination = faqQuestions.querySelector('.questions-pagination');
-    const qCount = 10;
+
     if(faqQuestions) {
+        const menu = faqQuestions.querySelector('.faq-questions-list')
+        const wrapper = faqQuestions.querySelector('.questions');
+        const pagination = faqQuestions.querySelector('.questions-pagination');
+        const qCount = 10;
 
         function getPaginationBullets(items, part) {
             let bulets = [];
