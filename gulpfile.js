@@ -27,7 +27,7 @@ import tingpng from 'gulp-tinypng';
 
 // html
 import fileinclude from 'gulp-file-include';
-import htmlValidator from 'gulp-w3c-html-validator';
+// import htmlValidator from 'gulp-w3c-html-validator';
 import htmlmin from 'gulp-htmlmin';
 
 // svg sprite
@@ -112,7 +112,7 @@ export const styles = () => {
 
 export const scripts = () => {
     return gulp.src(config.app.js)
-           .pipe(webpack(webConfig))
+          //  .pipe(webpack(webConfig))
            .pipe(gulp.dest(config.dist.js))
            .pipe(browserSync.stream())
 }
@@ -120,7 +120,7 @@ export const scripts = () => {
 export const html = () => {
     return gulp.src(html_arch)
            .pipe(fileinclude())
-           .pipe(htmlValidator())
+          //  .pipe(htmlValidator())
            .pipe(gulpif(isProd, htmlmin({collapseWhitespace: true })))
            .pipe(gulp.dest(distDir))
            .pipe(browserSync.stream())
@@ -136,26 +136,26 @@ const images = () => {
 
     return gulp.src(config.app.img)
 
-           .pipe(gulpif(minImg,
-             imagemin([
-               imgCompress({
-                   loops: 4,
-                   min: 70,
-                   max: 80,
-                   quality: 'high'
-               }),
-               mozjpeg({
-                 quality: 60,
-                 progressive: true,
-                 tune: "ms-ssim",
-                 smooth: 2
-               }),
-               imagemin.gifsicle(),
-               imagemin.svgo()
-             ])
-           ))
+          //  .pipe(gulpif(minImg,
+          //    imagemin([
+          //      imgCompress({
+          //          loops: 4,
+          //          min: 70,
+          //          max: 80,
+          //          quality: 'high'
+          //      }),
+          //      mozjpeg({
+          //        quality: 60,
+          //        progressive: true,
+          //        tune: "ms-ssim",
+          //        smooth: 2
+          //      }),
+          //      imagemin.gifsicle(),
+          //      imagemin.svgo()
+          //    ])
+          //  ))
  
-           .pipe(gulpif(minImg, tingpng(tiny) ))
+          //  .pipe(gulpif(minImg, tingpng(tiny) ))
  
            .pipe(gulp.dest(config.dist.img))
            .pipe(browserSync.stream())
@@ -278,8 +278,6 @@ export const grid = done => {
     done()
 };
 
-import path from 'path';
-
 export const getFiles = (dir, files_) => {
     
   files_ = files_ || [];
@@ -301,41 +299,6 @@ export const getFiles = (dir, files_) => {
     return files_;
 };
 
-// const searchCss = namedir => {
-//   fs.readdir(namedir, (err, files) => {
-//     if(files) {
-      
-//       letfilesList = files.filter(file => {
-//         return file.toLowerCase().includes('.scss');
-//       });
-
-//       console.log(filesList)
-
-//       // for(let i = start; i < files.length; i++) {
-
-//       //   let filename = files[i];
-
-//       //   if(/\.sass/.test(filename) && /\./.test(filename)) {
-//       //     return gulp.src(namedir + '/*.sass')
-//       //     .pipe(gulp.dest(config.app.stylesLibs))
-//       //   }
-//       //   else if(/\.scss/.test(filename)) {
-//       //     return gulp.src(namedir + '/*.scss')
-//       //     .pipe(gulp.dest(config.app.stylesLibs))
-//       //   }
-//       //   else if(!(/\./.test(filename)) && !endOnce) {
-//       //     console.log(filename)
-//       //     searchCss(namedir + '/' + filename);
-//       //   }
-//       //   else if(i == files.length - 1 && endOnce) {
-//       //     i = 0;
-//       //     endOnce = false;
-//       //   }
-//       // }
-//     }
-//   });
-// }
-
 export const csslib = () =>  {
   const libName = process.argv[3].replace('--', '');
   const files = getFiles(nodeModules + libName);
@@ -346,7 +309,7 @@ export const csslib = () =>  {
 
 export const fonts = gulp.series(gulp.parallel(fontTtf2Woff, fontTtf2Woff2), fontsStyle);
 
-export const build = gulp.series(clean, html, images, php, svg, scripts, fonts, styles);
+export const build = gulp.series(clean, php, svg, scripts, fonts, html, styles, images);
 
 export const watch = gulp.series(build, () => {
     

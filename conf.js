@@ -27,7 +27,7 @@ global.config = {
     },
     app: {
         php: `${appDir}*.php`,
-        js: `${appDirstatic}js/index.js`,
+        js: `${appDirstatic}js/**/*.js`,
         sass: `${appDirstatic}sass/` + mainSass,
         img: [`${appDirstatic}img/**/*`, '!app/static/img/svg/**'],
         fonts: `${appDirstatic}fonts/**/*`,

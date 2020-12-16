@@ -10,5 +10,6 @@ window.addEventListener('load', function() {
     modal();
     faqQuestions();
     MicroModal.init();
+    blogSlider();
     window.addEventListener('resize', menu);
 });

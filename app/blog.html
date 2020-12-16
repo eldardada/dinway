@@ -6,9 +6,16 @@
     <link rel="stylesheet" href="style.css">
     <title>Dinway</title>
 </head>
-<body>
+<body class="page">
 
-    @@include("static/html/modal-career-program.html")
+    <main class="main">
+        @@include("static/html/header.html")
+        @@include("static/html/blog-slider.html")
+    </main>
+
+    @@include("static/html/overlay.html")
+    @@include("static/html/footer.html")        
+
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="./static/js/micromodal.min.js"></script>
     <script src="./static/js/modules/hero/hero-video_main.js"></script>
@@ -24,9 +31,10 @@
     <script src="./static/js/modules/qustions-items.js"></script>
     <script src="./static/js/modules/simple-slider.js"></script>
     <script src="./static/js/modules/video.js"></script>
-    <script src="./static/js/functions.js"></script>
-    <script src="./static/js/questions.js"></script>
     <script src="./static/js/modules/blog-slider.js"></script>
+    <script src="./static/js/functions.js"></script>
+
+    <script src="./static/js/questions.js"></script>
     <script src="./static/js/index.js"></script>
 </body>
 </html>

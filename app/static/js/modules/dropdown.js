@@ -1,20 +1,23 @@
 function dropdown() {
     document.addEventListener('click', e => {
-        const item = e.target.closest('[data-list-item]');
+        e.preventDefault()
+        const target = e.target;
+        const item = target.closest('[data-list-item]');
         let nested = null;
-        
+
         if(item) {
-            nested = item ? item.querySelector('[data-list]') : false;
+            nested = item.querySelector('[data-list]');
         }
-        
         if(nested) {
             nested.classList.toggle('active');
             const title = item.querySelector('[data-title]');
-            const select = nested.querySelector('[data-select]');
-            if(title && select && e.target === select) {
-                let tmp = title.textContent;
-                title.textContent = select.textContent;
-                select.textContent = tmp;
+            const select = target.closest('[data-select]');
+
+            if(title && select && e.target.closest('[data-select]')) {
+                let tmp = title.innerHTML;
+                title.innerHTML = '';
+                title.innerHTML = select.innerHTML;
+                select.innerHTML = tmp;
             }
         }
         else {
